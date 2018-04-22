@@ -1,0 +1,48 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="push">
+    <mat-list id="sidenav-list">
+      <div class="container">
+        <img id="logo-tec" src="../assets/logo-tec.png" alt="tec-logo">
+      </div>
+      <hr>
+      <mat-list-item>
+        <i class="material-icons">home</i>        
+        <p class="list-p">Inicio</p>
+      </mat-list-item>
+      <hr>
+      <mat-list-item>
+        <i class="material-icons">folder</i>        
+        <p class="list-p">Proyectos</p>
+      </mat-list-item>
+      <hr>
+      <mat-list-item>
+        <i class="material-icons">people</i>        
+        <p class="list-p">Miembros</p>
+      </mat-list-item>
+      <hr>
+      <mat-list-item>
+        <i class="material-icons">format_list_bulleted</i>        
+        <p class="list-p">Propuestas de Proyectos</p>
+      </mat-list-item>
+      <hr>
+      <hr>
+      <mat-list-item>
+        <i class="material-icons">keyboard_return</i>        
+        <p class="list-p">Inicio</p>
+      </mat-list-item>
+      <hr>
+    </mat-list>
+    <div class="credit container text-center">
+      <h5 class="text-secondary"><strong>Desarrolladores</strong></h5>
+      <p style="margin-bottom: 0%">Justin A. Castillo Valladares</p>
+      <a style="margin-top: 0%" href="https://github.com/JustinCast">Github</a>
+      <p>Luis Carlos González Calderón</p>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-icon-button (click)="sidenav.toggle()" color="primary">
+      <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
+    </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
