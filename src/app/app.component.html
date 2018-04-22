@@ -5,7 +5,7 @@
         <img id="logo-tec" src="../assets/logo-tec.png" alt="tec-logo">
       </div>
       <hr>
-      <mat-list-item>
+      <mat-list-item routerLink="home">
         <i class="material-icons">home</i>        
         <p class="list-p">Inicio</p>
       </mat-list-item>
@@ -44,5 +44,8 @@
     <button mat-icon-button (click)="sidenav.toggle()" color="primary">
       <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
     </button>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
