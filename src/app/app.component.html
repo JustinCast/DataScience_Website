@@ -5,34 +5,39 @@
         <img id="logo-tec" src="../assets/logo-tec.png" alt="tec-logo">
       </div>
       <hr>
-      <mat-list-item routerLink="home">
+      <mat-list-item routerLink="home" (click)="sidenav.toggle()">
         <i class="material-icons">home</i>        
         <p class="list-p">Inicio</p>
       </mat-list-item>
       <hr>
-      <mat-list-item>
+      <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
+        <i class="material-icons">account_box</i>        
+        <p class="list-p">Mi Cuenta</p>
+      </mat-list-item>
+      <hr>
+      <mat-list-item (click)="sidenav.toggle()">
         <i class="material-icons">folder</i>        
         <p class="list-p">Proyectos</p>
       </mat-list-item>
       <hr>
-      <mat-list-item>
+      <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
         <i class="material-icons">people</i>        
         <p class="list-p">Miembros</p>
       </mat-list-item>
       <hr>
-      <mat-list-item>
+      <hr>
+      <mat-list-item (click)="sidenav.toggle()">
         <i class="material-icons">format_list_bulleted</i>        
         <p class="list-p">Propuestas de Proyectos</p>
       </mat-list-item>
-      <hr>
-      <hr>
-      <mat-list-item>
+      <hr/>
+      <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
         <i class="material-icons">keyboard_return</i>        
         <p class="list-p">Salir</p>
       </mat-list-item>
-      <hr>
+      <hr/>
     </mat-list>
-    <div class="credit container text-center">
+    <div class="credit container text-center" (click)="sidenav.toggle()">
       <h5 class="text-secondary"><strong>Desarrolladores</strong></h5>
       <p style="margin-bottom: 0%">Justin A. Castillo Valladares</p>
       <a style="margin-top: 0%" href="https://github.com/JustinCast">Github</a>
@@ -44,8 +49,6 @@
     <button mat-icon-button (click)="sidenav.toggle()" color="primary">
       <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
     </button>
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
