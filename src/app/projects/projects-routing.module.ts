@@ -7,10 +7,14 @@ import { ProjectsComponent } from "./projects/projects.component";
 import { ProjectDetailsComponent } from "./project-details/project-details.component";
 
 const ROUTES: Routes = [
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'project/:id', component: ProjectDetailsComponent },
-    { path: 'project/edit-project/:id', component: EditProjectComponent },
-    { path: 'create-project', component: CreateProjectComponent }
+    { 
+        path: 'projects', component: ProjectsComponent,
+            children: [
+                { path: 'project/:id', component: ProjectDetailsComponent },
+                { path: 'project/edit-project/:id', component: EditProjectComponent },
+                { path: 'create-project', component: CreateProjectComponent }
+            ]
+    },
 ]
 
 @NgModule({
