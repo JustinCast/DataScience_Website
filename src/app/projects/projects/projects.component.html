@@ -1,24 +1,15 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
-    <!--<logo>
-        <a href="#" class="navbar-brand">Navbar</a>
-    </logo> -->
-    <links>
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link waves-light" mdbWavesEffect>Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" >Disabled</a>
-            </li>
-        </ul>
-    </links>
-</mdb-navbar>
+<mat-toolbar class="toolbar">
+    <mat-list class="list" role="list">
+        <mat-list-item class="header-li" role="listitem">
+            <button mat-raised-button>Visualizar Proyectos</button>
+        </mat-list-item>
+        <mat-list-item class="header-li" role="listitem">            
+            <button mat-raised-button>
+                <i class="material-icons">plus_one</i>
+            </button>
+        </mat-list-item>
+    </mat-list>
+</mat-toolbar>
             
 <div class="container">
   <router-outlet></router-outlet>
