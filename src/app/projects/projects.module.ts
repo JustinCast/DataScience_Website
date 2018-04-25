@@ -18,6 +18,9 @@ import { SharedModule } from '../shared/shared.module';
     EditProjectComponent, 
     CreateProjectComponent, 
     ProjectDetailsComponent
+  ],
+  exports: [
+    ProjectsComponent
   ]
 })
 export class ProjectsModule { }

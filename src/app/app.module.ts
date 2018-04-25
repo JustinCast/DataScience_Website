@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ROUTES } from './app.routing';
 import { ProjectsModule } from './projects/projects.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProjectsModule } from './projects/projects.module';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
-    ProjectsModule
+    ProjectsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
