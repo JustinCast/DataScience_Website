@@ -7,11 +7,15 @@ import {UsersComponent} from './users/users.component'
 import {DetailsUserComponent} from './details-user/details-user.component'
 
 const routes: Routes = [
-    { path: '', component: UsersComponent},
-    { path: 'details-user', component: DetailsUserComponent},
-    { path: 'create-user', component: CreateUserComponent},
-    { path: 'modify-user', component: ModifyUserComponent}
-  ];
+    {
+      path: 'users', component: UsersComponent,
+        children: [
+          { path: 'details-user', component: DetailsUserComponent},
+          { path: 'create-user', component: CreateUserComponent},
+          { path: 'modify-user', component: ModifyUserComponent}
+        ]
+    }
+];
 
 @NgModule({
     imports: [
