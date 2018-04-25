@@ -15,7 +15,7 @@
         <p class="list-p">Mi Cuenta</p>
       </mat-list-item>
       <hr>
-      <mat-list-item (click)="sidenav.toggle()">
+      <mat-list-item routerLink="projects" (click)="sidenav.toggle()">
         <i class="material-icons">folder</i>        
         <p class="list-p">Proyectos</p>
       </mat-list-item>
@@ -45,10 +45,12 @@
     </div>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content style="width:100%">
     <button mat-icon-button (click)="sidenav.toggle()" color="primary">
       <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
     </button>
-    <router-outlet></router-outlet>
+    <div class="container main-container">
+      <router-outlet class="container"></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
