@@ -6,6 +6,7 @@ import { CreateProjectComponent } from './create-project/create-project.componen
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { ShowProjectsComponent } from './show-projects/show-projects.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
     ProjectsComponent, 
     EditProjectComponent, 
     CreateProjectComponent, 
-    ProjectDetailsComponent
+    ProjectDetailsComponent, 
+    ShowProjectsComponent
   ],
   exports: [
     ProjectsComponent

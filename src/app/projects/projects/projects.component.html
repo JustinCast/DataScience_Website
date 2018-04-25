@@ -1,15 +1,22 @@
 <mat-toolbar class="toolbar">
     <mat-list class="list" role="list">
         <mat-list-item class="header-li" role="listitem">
-            <button mat-raised-button>Proyectos</button>
+            <button routerLink="show-projects" mat-raised-button color="primary">
+                Proyectos
+                |
+                <mat-icon matSuffix>search</mat-icon>
+            </button>
         </mat-list-item>
         <mat-list-item class="header-li" role="listitem">            
-            <button class="font-config" id="add-btn" mat-raised-button>
+            <button routerLink="create-project" color="accent" id="add-btn" mat-raised-button>
                 Agregar Proyecto
+                |
+                <mat-icon matSuffix>add</mat-icon>
             </button>
         </mat-list-item>
     </mat-list>
 </mat-toolbar>
+<hr>
             
 <div class="container">
   <router-outlet></router-outlet>
