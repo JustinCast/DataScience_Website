@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar">
+    <mat-list class="list" role="list">
+        <mat-list-item class="header-li" role="listitem">
+            <button mat-raised-button [routerLink]="['details-user']">Users</button>
+        </mat-list-item>
+        <mat-list-item class="header-li" role="listitem">            
+            <button class="font-config" [routerLink]="['create-user']" id="add-btn" mat-raised-button>
+                Agregar User 
+                <mat-icon>person_add</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+</mat-toolbar>
+            
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+    

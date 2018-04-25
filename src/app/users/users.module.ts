@@ -6,6 +6,8 @@ import { UsersComponent } from './users/users.component';
 import { DetailsUserComponent } from './details-user/details-user.component';
 import { SharedModule } from '../shared/shared.module';
 import {usersRoutingModule} from './users-routing.module';
+import { ShowUsersComponent } from './show-users/show-users.component';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,7 @@ import {usersRoutingModule} from './users-routing.module';
     CreateUserComponent, 
     ModifyUserComponent, 
     UsersComponent, 
-    DetailsUserComponent
+    DetailsUserComponent, ShowUsersComponent
   ],
   exports: [
     UsersComponent
