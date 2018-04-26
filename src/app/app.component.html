@@ -1,44 +1,46 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="push">
-    <mat-list id="sidenav-list">
-      <div class="container">
-        <img id="logo-tec" src="../assets/logo-tec.png" alt="tec-logo">
-      </div>
-      <hr>
-      <mat-list-item routerLink="home" (click)="sidenav.toggle()">
-        <i class="material-icons">home</i>        
-        <p class="list-p">Inicio</p>
-      </mat-list-item>
-      <hr>
-      <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
-        <i class="material-icons">account_box</i>        
-        <p class="list-p">Mi Cuenta</p>
-      </mat-list-item>
-      <hr>
-      <mat-list-item routerLink="projects" (click)="sidenav.toggle()">
-        <i class="material-icons">folder</i>        
-        <p class="list-p">Proyectos</p>
-      </mat-list-item>
-      <hr>
-      <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
-        <i class="material-icons">people</i>        
-        <p class="list-p">Miembros</p>
-      </mat-list-item>
-      <hr>
-      <hr>
-      <mat-list-item (click)="sidenav.toggle()">
-        <i class="material-icons">format_list_bulleted</i>        
-        <p class="list-p">Propuestas de Proyectos</p>
-      </mat-list-item>
-      <hr/>
-      <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
-        <i class="material-icons">keyboard_return</i>        
-        <p class="list-p">Salir</p>
-      </mat-list-item>
-      <hr/>
-    </mat-list>
-    <div class="credit container text-center" (click)="sidenav.toggle()">
-      <h5 class="text-secondary"><strong>Desarrolladores</strong></h5>
+  <mat-sidenav id="main-sidenav" #sidenav mode="push">
+    <mat-card id="sidenav-card">
+      <mat-list id="sidenav-list">
+        <div class="container">
+          <img id="logo-tec" src="../assets/logo-tec.png" alt="tec-logo">
+        </div>
+        <hr>
+        <mat-list-item routerLink="home" (click)="sidenav.toggle()">
+          <i class="material-icons">home</i>        
+          <p class="list-p">Inicio</p>
+        </mat-list-item>
+        <hr>
+        <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
+          <i class="material-icons">account_box</i>        
+          <p class="list-p">Mi Cuenta</p>
+        </mat-list-item>
+        <hr>
+        <mat-list-item routerLink="projects" (click)="sidenav.toggle()">
+          <i class="material-icons">folder</i>        
+          <p class="list-p">Proyectos</p>
+        </mat-list-item>
+        <hr>
+        <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
+          <i class="material-icons">people</i>        
+          <p class="list-p">Miembros</p>
+        </mat-list-item>
+        <hr>
+        <hr>
+        <mat-list-item (click)="sidenav.toggle()">
+          <i class="material-icons">format_list_bulleted</i>        
+          <p class="list-p">Propuestas de Proyectos</p>
+        </mat-list-item>
+        <hr/>
+        <mat-list-item class="list-item-back" (click)="sidenav.toggle()">
+          <i class="material-icons">keyboard_return</i>        
+          <p class="list-p">Salir</p>
+        </mat-list-item>
+        <hr/>
+      </mat-list>
+    </mat-card>
+    <div class="credit container text-center text-white" (click)="sidenav.toggle()">
+      <h5 class="text-white"><strong>Desarrolladores</strong></h5>
       <p style="margin-bottom: 0%">Justin A. Castillo Valladares</p>
       <a style="margin-top: 0%" href="https://github.com/JustinCast">Github</a>
       <p>Luis Carlos González Calderón</p>
@@ -46,8 +48,8 @@
   </mat-sidenav>
 
   <mat-sidenav-content style="width:100%; background-image: url('../assets/blurred.jpg')">
-    <button mat-icon-button (click)="sidenav.toggle()" color="primary">
-      <mat-icon aria-label="Example icon-button with a heart icon">menu</mat-icon>
+    <button mat-icon-button (click)="sidenav.toggle()" style="color: white">
+      <mat-icon style="font-size: 38px; " aria-label="Example icon-button with a heart icon">menu</mat-icon>
     </button>
     <div class="main-container">
       <router-outlet></router-outlet>
