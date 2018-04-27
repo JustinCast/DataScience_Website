@@ -12,6 +12,7 @@ import { ROUTES } from './app.routing';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
+import { ProposalsModule } from './proposals/proposals.module';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { UsersModule } from './users/users.module';
     RouterModule.forRoot(ROUTES),
     ProjectsModule,
     SharedModule,
-    UsersModule
+    UsersModule,
+    ProposalsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
