@@ -1,1 +1,36 @@
-<form action="" style="background-color: rebeccapurple"><input type="text"></form>
+<mat-card class="container">
+    <label> Current user data </label>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Name"> 
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Lastname"> 
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Username"> 
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Password"> 
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Rol">
+                    <mat-option *ngFor="let role of roles" [value]="role.value">
+                    {{ role.viewValue }}
+                    </mat-option>
+                </mat-select>
+                </mat-form-field>
+        </div>
+
+    <button mat-button class="font-config" id="add-btn" type="submit" >Modify
+      <mat-icon>near_me</mat-icon>
+    </button>
+</mat-card>

@@ -13,7 +13,7 @@ const routes: Routes = [
       {path: 'create-proposal', component: CreateProposalComponent},
       {path: 'modify-proposal', component: ModifyProposalComponent},
       {path: 'details-proposal', component: DetailsProposalComponent},
-      {path: 'show-proposal', component: ShowProposalComponent}
+      {path: 'show-proposal/:id', component: ShowProposalComponent}
       ]}
 ];
 

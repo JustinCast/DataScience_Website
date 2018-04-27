@@ -1,3 +1,19 @@
-<p>
-  proposal works!
-</p>
+<mat-toolbar class="toolbar">
+    <mat-list class="list" role="list">
+        <mat-list-item class="header-li" role="listitem">
+            <button mat-button class="font-config" [routerLink]="['show-proposal/:id']">Proposals
+                <mat-icon>remove_red_eye</mat-icon>
+            </button>   
+        </mat-list-item>
+        <mat-list-item class="header-li" role="listitem">            
+            <button mat-button class="font-config" [routerLink]="['create-proposal']" >
+                Add Proposal   
+                <mat-icon>library_books</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+</mat-toolbar>
+        
+<div class="container">
+<router-outlet></router-outlet>
+</div>
