@@ -1,11 +1,13 @@
 <mat-toolbar class="toolbar">
         <mat-list class="list" role="list">
             <mat-list-item class="header-li" role="listitem">
-                <button mat-button [routerLink]="['show-users']">Users</button>
+                <button mat-button class="font-config" [routerLink]="['show-users/:id']">Users
+                    <mat-icon>remove_red_eye</mat-icon>
+                </button>   
             </mat-list-item>
             <mat-list-item class="header-li" role="listitem">            
                 <button mat-button class="font-config" [routerLink]="['create-user']" >
-                    Agregar User 
+                    Add User 
                     <mat-icon>person_add</mat-icon>
                 </button>
             </mat-list-item>
