@@ -13,12 +13,16 @@ import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
 import { ProposalsModule } from './proposals/proposals.module';
+import { ReferencesModule} from './references/references.module'
+import { CodesModule } from './codes/codes.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,10 @@ import { ProposalsModule } from './proposals/proposals.module';
     ProjectsModule,
     SharedModule,
     UsersModule,
-    ProposalsModule
+    ProposalsModule,
+    ReferencesModule,
+    CodesModule,
+    PagesModule
 
   ],
   providers: [],

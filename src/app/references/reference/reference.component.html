@@ -1,0 +1,55 @@
+<mat-toolbar class="toolbar">
+    <mat-list class="list" role="list">
+        <button mat-button [matMenuTriggerFor]="references">References
+          <mat-icon>folder</mat-icon>
+        </button>
+    </mat-list>
+    <mat-list class="list" role="list">
+        <button mat-button [matMenuTriggerFor]="codes">Codes
+            <mat-icon>code</mat-icon>
+        </button>
+    </mat-list>
+    <mat-list class="list" role="list">
+        <button mat-button [matMenuTriggerFor]="pages">Pages
+            <mat-icon>public</mat-icon>
+        </button>
+    </mat-list>
+</mat-toolbar>
+
+
+<mat-menu #references>
+  <button mat-menu-item >
+      <mat-icon>visibility</mat-icon>
+      Show References  
+  </button>
+  <button mat-menu-item [routerLink]="['create-reference']">
+      <mat-icon>note_add</mat-icon>
+      Add reference  
+  </button>
+</mat-menu>
+
+<mat-menu #codes>
+  <button mat-menu-item >
+      <mat-icon>visibility</mat-icon>
+      Show codes
+  </button>
+  <button mat-menu-item >
+      <mat-icon>add_circle</mat-icon>
+      Add code
+  </button>
+</mat-menu>
+
+<mat-menu #pages>
+  <button mat-menu-item >
+      <mat-icon>visibility</mat-icon>
+      Show pages
+  </button>
+  <button mat-menu-item >
+      <mat-icon>add_circle</mat-icon>
+      Add page
+  </button>
+</mat-menu>
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>

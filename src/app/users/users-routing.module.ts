@@ -15,8 +15,7 @@ const routes: Routes = [
           { path: 'create-user', component: CreateUserComponent},
           { path: 'show-users', component: ShowUsersComponent},
           { path: 'modify-user', component: ModifyUserComponent},
-          { path: 'details-user', component: DetailsUserComponent},
-          { path: 'show-users', component: UsersComponent}
+          { path: 'details-user', component: DetailsUserComponent}
         ]  
     }
 ];
