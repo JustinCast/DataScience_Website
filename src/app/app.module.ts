@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { ROUTES } from './app.routing';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
+import { UsersModule } from './users/users.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
     ProjectsModule,
-    SharedModule
+    SharedModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
