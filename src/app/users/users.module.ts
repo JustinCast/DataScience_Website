@@ -5,7 +5,7 @@ import { ModifyUserComponent } from './modify-user/modify-user.component';
 import { UsersComponent } from './users/users.component';
 import { DetailsUserComponent } from './details-user/details-user.component';
 import { SharedModule } from '../shared/shared.module';
-import {usersRoutingModule} from './users-routing.module';
+import { usersRoutingModule} from './users-routing.module';
 import { ShowUsersComponent } from './show-users/show-users.component';
 
 
@@ -19,7 +19,8 @@ import { ShowUsersComponent } from './show-users/show-users.component';
     CreateUserComponent, 
     ModifyUserComponent, 
     UsersComponent, 
-    DetailsUserComponent, ShowUsersComponent
+    DetailsUserComponent,
+    ShowUsersComponent
   ],
   exports: [
     UsersComponent

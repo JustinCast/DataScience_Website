@@ -4,8 +4,8 @@ form{
     text-align: center
 }
 input{
-    width: 70%;
-    margin: auto
+    width: 105%;
+    margin: auto;
 }
 .input-container{
     width: 80%;
@@ -18,10 +18,11 @@ ul{
     text-align: right;
     margin: auto;
     margin-right: 0;
-    width: 100%
+    width: 100%;
+
 }
 #user-admin-container {
-    background-color: beige;
+    background-color: #3F51B5;
     width: 100%;
 }
 #user-search{
@@ -29,9 +30,14 @@ ul{
     background-color: coral;
 }
 #mat-card-search{
-    padding: auto;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-top: 7%;
+    padding-top:0%;
+    padding-bottom: 0%;
+    margin-bottom:3%;
+    width: 70%;
+    text-align: center;
+    background-color: #E8EAF6;
+    border-radius: 8px;
 }
 
 
