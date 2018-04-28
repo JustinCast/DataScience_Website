@@ -14,7 +14,6 @@ import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
 import { ProposalsModule } from './proposals/proposals.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
