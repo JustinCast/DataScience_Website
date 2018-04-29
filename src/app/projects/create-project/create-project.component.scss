@@ -1,17 +1,42 @@
-form{
-    margin: auto;
-    width: 80%;
-    text-align: center
-}
 input{
-    width: 70%;
-    margin: auto;
-}
-.input-container{
     width: 80%;
-    margin-top: 4%;
+    margin: auto;
 }
 #create-project-card{
-    color: white;
-    background-color: transparent
+    border-radius: 7px;
 }
+mat-form-field{
+    margin: auto;
+    display: block;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 90%;
+}
+form{
+    margin: auto;
+    width: 90%;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  #added-member-list{
+    border-style: 3px solid
+  }

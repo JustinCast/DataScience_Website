@@ -12,9 +12,10 @@ import { MaterialModule } from '../material/material.module';
   ],
   exports: [
     MDBBootstrapModule,
-    MaterialModule,
+    MaterialModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  declarations: []
+  declarations: [
+  ]
 })
 export class SharedModule { }
