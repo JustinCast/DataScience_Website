@@ -1,15 +1,9 @@
-form{
-    margin: auto;
-    width: 80%;
-    text-align: center
-}
 input{
-    width: 105%;
-    margin: auto;
+    width: 70%;
+    margin: auto
 }
 .input-container{
     width: 80%;
-    margin-top: 4%
 }
 ul{
     color: white
@@ -18,23 +12,25 @@ ul{
     text-align: right;
     margin: auto;
     margin-right: 0;
-    width: 100%
+    width: 90%
 }
-#user-admin-container {
-    background-color: #90A4AE;;
+#proposal-admin-container {
+    background-color: #EEEEEE;
     width: 100%;
 }
-#user-search{
-    margin-left: 50%;
-    background-color: coral;
-}
-#mat-card-search{
-    margin-top: 7%;
-    padding-top:0%;
-    padding-bottom: 0%;
-    margin-bottom:3%;
-    width: 70%;
+#search-proposal-card{
+    background-color:rgba(255,255,255, 0.8);
+    margin: auto;
+    margin-bottom: 4%;
+    padding: 0;
+    width: 60%;
+    border-radius: 45px;
     text-align: center;
-    border-radius: 8px;
-    background-color: #ECEFF1;
+    margin-top: 7%;
+}
+mat-form-field{
+    margin: auto;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }

@@ -15,10 +15,10 @@
         </button>
     </mat-list>
 </mat-toolbar>
-
+<hr>
 
 <mat-menu #references>
-  <button mat-menu-item >
+  <button mat-menu-item [routerLink]="['show-references']">
       <mat-icon>visibility</mat-icon>
       Show References  
   </button>
@@ -29,24 +29,24 @@
 </mat-menu>
 
 <mat-menu #codes>
-  <button mat-menu-item >
+  <button mat-menu-item [routerLink]="['show-codes']">   
       <mat-icon>visibility</mat-icon>
       Show codes
   </button>
-  <button mat-menu-item >
-      <mat-icon>add_circle</mat-icon>
-      Add code
+  <button mat-menu-item [routerLink]="['create-code']">
+      <mat-icon>add</mat-icon>
+      Create code
   </button>
 </mat-menu>
 
 <mat-menu #pages>
-  <button mat-menu-item >
+  <button mat-menu-item [routerLink]="['show-pages']">
       <mat-icon>visibility</mat-icon>
       Show pages
   </button>
-  <button mat-menu-item >
-      <mat-icon>add_circle</mat-icon>
-      Add page
+  <button mat-menu-item [routerLink]="['create-page']" >
+      <mat-icon>add_to_photos</mat-icon>
+      Create page
   </button>
 </mat-menu>
 

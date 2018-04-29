@@ -1,47 +1,29 @@
-<mat-card id="mat-card-search" class="container">
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Search" > 
-    </mat-form-field>
-    <button mat-button type="submit">
-        <mat-icon>search</mat-icon>
-    </button>
-</mat-card>
-
-<div id="user-admin-container" class="container card">
-        <mat-list style="width: 100%; padding: 0; margin-bottom: 1% ; " >
-            <mat-list-item class="card" style="font-size: 15px; margin-top: 1%;  background-color: #E8EAF6;">
-                <div>
-                    Usuario 1
-                </div>
-                <div id="actions-container">
-                    <button mat-button color="" >
-                            <mat-icon>remove_red_eye</mat-icon>
-                    </button>
-                    <button mat-button color="primary" [routerLink]="['modify-user']">
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                    <button mat-button color="warn">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </div>
-            </mat-list-item>
-        </mat-list>
+<mat-card id="search-user-card">
+        <mat-form-field class="input-container">
+            <input matInput placeholder="Search User">
+        </mat-form-field>
+        <button mat-icon-button color="primary">
+            <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+        </button>
+    </mat-card>
+    
+    <div id="user-admin-container" class="container card">
         <mat-list style="width: 100%; padding: 0; margin-bottom: 1%">
-            <mat-list-item class="card" style="font-size: 15px; margin-top: 1%;  background-color: #E8EAF6;">
+            <mat-list-item class="card" style="font-size: 15px; margin-top: 1%;">
                 <div>
-                    Usuario 2
+                    User 1
                 </div>
                 <div id="actions-container">
-                    <button mat-button color="">
-                            <mat-icon>remove_red_eye</mat-icon>
+                    <button mat-icon-button color="primary">
+                        <mat-icon>visibility</mat-icon>
                     </button>
-                    <button mat-button color="primary">
+                    <button mat-icon-button color="primary">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-button color="warn">
+                    <button mat-icon-button color="warn">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </div>
             </mat-list-item>
         </mat-list>
-</div>
+    </div>

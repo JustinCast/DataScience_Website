@@ -9,6 +9,8 @@ import { PagesModule } from '../pages/pages.module';
 import { CodesModule }from '../codes/codes.module';
 import { referencesRoutingModule } from './references-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { AddPageComponent } from './add-page/add-page.component';
+import { AddCodeComponent } from './add-code/add-code.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { SharedModule } from '../shared/shared.module';
     CreateReferenceComponent,
     ModifyReferenceComponent,
     DetailsReferenceComponent,
-    ShowReferencesComponent
+    ShowReferencesComponent,
+    AddPageComponent,
+    AddCodeComponent
     ],
     exports:[
       ReferenceComponent

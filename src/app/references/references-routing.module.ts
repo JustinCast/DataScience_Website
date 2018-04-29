@@ -16,6 +16,8 @@ import {CreatePageComponent} from '../pages/create-page/create-page.component';
 import {ModifyPageComponent} from '../pages/modify-page/modify-page.component';
 import {DetailsPageComponent} from '../pages/details-page/details-page.component';
 import {ShowPagesComponent} from '../pages/show-pages/show-pages.component';
+import { AddCodeComponent } from './add-code/add-code.component';
+import { AddPageComponent } from './add-page/add-page.component';
 
 
 
@@ -39,7 +41,10 @@ const routes: Routes = [
           { path: 'create-code', component: CreateCodeComponent },
           { path: 'show-codes', component: ShowCodesComponent},
           { path: 'modify-code', component: ModifyCodeComponent},
-          { path: 'details-code', component: DetailsCodeComponent}
+          { path: 'details-code', component: DetailsCodeComponent},
+
+          { path: 'add-code', component: AddCodeComponent},
+          { path: 'add-page', component: AddPageComponent},
         ]  
     }
 ];
