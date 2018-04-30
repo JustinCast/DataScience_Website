@@ -4,12 +4,31 @@
         <input matInput placeholder="Nombre del proyecto">
     </mat-form-field>
     <mat-form-field>
+      <mat-select placeholder="Propuesta">
+        <mat-option *ngFor="let p of proposal" [value]="p">
+          {{ p }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
       <mat-select placeholder="Agregar Investigación">
-        <mat-option *ngFor="let i of investigations" [value]="i.value">
+        <mat-option *ngFor="let i of investigations" [value]="i">
           {{ i }}
         </mat-option>
       </mat-select>
     </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Agregar referencia">
+        <mat-option *ngFor="let r of references" [value]="r" (click)="addReference(r)">
+          {{ r }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-list *ngIf="addedReferences.length !== 0" class="added">
+      <mat-list-item *ngFor="let ar of addedReferences">
+        {{ar}}
+      </mat-list-item>
+    </mat-list>
     <mat-accordion>
         <mat-expansion-panel (opened)="panelOpenState = true"
         (closed)="panelOpenState = false">
@@ -54,12 +73,12 @@
                 <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
               </mat-table>
               <mat-paginator #paginator
-                 [pageSize]="7"
-                 [pageSizeOptions]="[5, 10, 20]"
-                 [showFirstLastButtons]="true">
+                  [pageSize]="7"
+                  [pageSizeOptions]="[5, 10, 20]"
+                  [showFirstLastButtons]="true">
               </mat-paginator>
             </div>
-            <mat-list id="added-member-list" *ngIf="addedMembers.length !== 0">
+            <mat-list class="added" *ngIf="addedMembers.length !== 0">
               <mat-list-item *ngFor="let am of addedMembers">
                 {{am}}
               </mat-list-item>

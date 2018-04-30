@@ -13,8 +13,19 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
     "Investigación 2",
     "Investigación 3"
   ]
+  references = [
+    "Referencia 1", 
+    "Referencia 2",
+    "Referencia 3"
+  ]
+  proposal = [
+    "Referencia 1", 
+    "Referencia 2",
+    "Referencia 3"
+  ]
   displayedColumns = ['name', 'lastName', 'projectCount', 'actions'];
   addedMembers = []
+  addedReferences = []
   @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -38,6 +49,9 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
 
   addMember(i) {
     this.addedMembers.unshift(`${i.name} ${i.lastName}`)
+  }
+  addReference(i) {
+    this.addedReferences.unshift(i)
   }
 
 }
