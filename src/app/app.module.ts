@@ -16,6 +16,7 @@ import { ProposalsModule } from './proposals/proposals.module';
 import { ReferencesModule} from './references/references.module'
 import { CodesModule } from './codes/codes.module';
 import { PagesModule } from './pages/pages.module';
+import { InvestigationsModule } from './investigations/investigations.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PagesModule } from './pages/pages.module';
     ProposalsModule,
     ReferencesModule,
     CodesModule,
-    PagesModule
+    PagesModule,
+    InvestigationsModule
 
   ],
   providers: [],
