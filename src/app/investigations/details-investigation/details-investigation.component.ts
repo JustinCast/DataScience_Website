@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-details-investigation',
-  templateUrl: './details-investigation.component.html',
-  styleUrls: ['./details-investigation.component.scss']
-})
-export class DetailsInvestigationComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-=======
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
@@ -36,4 +19,3 @@ export class DetailsInvestigationComponent implements OnInit {
   }
 
 }
->>>>>>> luis_dev
