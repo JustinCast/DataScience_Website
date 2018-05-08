@@ -1,3 +1,6 @@
+<button mat-fab (click)="openDialogCreateProposal()" color="primary" style="float: right;margin: 0%; background-color: grey" >
+    Add 
+ </button>
 <mat-card id="search-proposal-card">
         <mat-form-field class="input-container">
             <input matInput placeholder="Search Proposal">
@@ -14,13 +17,13 @@
                     Proposal 1
                 </div>
                 <div id="actions-container">
-                    <button mat-icon-button color="primary">
+                    <button mat-icon-button color="primary" (click)="openDialogDetailsProposal()">
                         <mat-icon>visibility</mat-icon>
                     </button>
-                    <button mat-icon-button color="primary">
+                    <button mat-icon-button color="primary" (click)="openDialogModifyProposal()">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button color="warn">
+                    <button mat-icon-button color="warn" (click)="openDialogDeleteProposal()">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </div>

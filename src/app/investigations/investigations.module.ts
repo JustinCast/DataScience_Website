@@ -6,6 +6,7 @@ import { ModifyInvestigationComponent } from './modify-investigation/modify-inve
 import { ShowInvestigationsComponent } from './show-investigations/show-investigations.component';
 import { DetailsInvestigationComponent } from './details-investigation/details-investigation.component';
 import { investigationsRoutingModule } from './investigations-router.module';
+import { ConfirmComponent } from '../shared/confirm/confirm.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,10 @@ import { investigationsRoutingModule } from './investigations-router.module';
     DetailsInvestigationComponent
   ],
   entryComponents:[
-    CreateInvestigationComponent
+    CreateInvestigationComponent,
+    ConfirmComponent,
+    ModifyInvestigationComponent,
+    DetailsInvestigationComponent
   ]
 })
 export class InvestigationsModule { }
