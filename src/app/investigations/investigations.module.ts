@@ -18,6 +18,9 @@ import { investigationsRoutingModule } from './investigations-router.module';
     ModifyInvestigationComponent, 
     ShowInvestigationsComponent, 
     DetailsInvestigationComponent
+  ],
+  entryComponents:[
+    CreateInvestigationComponent
   ]
 })
 export class InvestigationsModule { }
