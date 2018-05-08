@@ -1,3 +1,5 @@
+@import "../../variables";
+
 input{
     width: 70%;
     margin: auto
@@ -33,4 +35,19 @@ mat-form-field{
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+#view-btn{
+    color: $show-btn
+}
+#edit-btn{
+    color:$edit-btn;
+}
+#delete-btn{
+    color:$delete-btn;
+}
+#add-btn{
+    background-color: $add-btn;
+    float: right;
+    margin: 0%;
 }

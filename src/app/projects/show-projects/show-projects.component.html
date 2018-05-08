@@ -1,4 +1,4 @@
-<button mat-fab (click)="openDialogCreateProject()" color="primary" style="float: right;margin: 0%; background-color: grey" >
+<button mat-fab (click)="openDialogCreateProject()" color="primary" id="add-btn" >
     Add 
  </button>
  
@@ -21,10 +21,10 @@
                 <button mat-icon-button id="view-btn" (click)="openDialogDetailsProject()">
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-icon-button color="primary" (click)="openDialogModifyProject()">
+                <button mat-icon-button id="edit-btn" (click)="openDialogModifyProject()">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="warn" (click)="openDialogDeleteProject()">
+                <button mat-icon-button id="delete-btn" (click)="openDialogDeleteProject()">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>

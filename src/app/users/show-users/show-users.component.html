@@ -1,4 +1,4 @@
-<button mat-fab (click)="openDialogCreateUser()" color="primary" style="float: right;margin: 0%; background-color: grey" >
+<button mat-fab (click)="openDialogCreateUser()" color="primary" id="add-btn" >
     Add 
  </button>
 <mat-card id="search-user-card">
@@ -17,13 +17,13 @@
                     User 1
                 </div>
                 <div id="actions-container">
-                    <button mat-icon-button  style="color: blue" (click)="openDialogDetailsUser()">
+                    <button mat-icon-button  id="view-btn" (click)="openDialogDetailsUser()">
                         <mat-icon>visibility</mat-icon>
                     </button>
-                    <button mat-icon-button style="color: rgba(88, 228, 23, 0.932)" (click)="openDialogModifyUser()">
+                    <button mat-icon-button id="edit-btn" (click)="openDialogModifyUser()">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button style="color: red" (click)="openDialogDeleteInvestigation()">
+                    <button mat-icon-button id="delete-btn" (click)="openDialogDeleteInvestigation()">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </div>

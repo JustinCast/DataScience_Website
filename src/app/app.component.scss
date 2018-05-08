@@ -27,7 +27,7 @@ hr{
 }
 mat-list-item:hover{
     cursor: pointer;
-    background-color: indigo;
+    background-color: #3949ab;
     color: white
 }
 
@@ -38,10 +38,8 @@ mat-list-item:hover{
 .list-p{
     margin: auto
 }
-.list-item-back{
-    //background-color: #FAFAFA
-}
 .main-container{
     width: 75%;
     margin: auto;
 }
+

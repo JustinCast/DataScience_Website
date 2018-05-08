@@ -1,4 +1,4 @@
-<button mat-fab (click)="openDialogCreateInvestigation()" color="primary" style="float: right;margin: 0%; background-color: grey" >
+<button mat-fab (click)="openDialogCreateInvestigation()" id="add-btn" color="primary">
    Add 
 </button>
 
@@ -18,13 +18,13 @@
                 Investigation 1
             </div>
             <div id="actions-container">
-                <button mat-icon-button color="primary" (click)="openDialogDetailsInvestigation()">
+                <button mat-icon-button id="view-btn" (click)="openDialogDetailsInvestigation()">
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-icon-button color="primary" (click)="openDialogModifyInvestigation()">
+                <button mat-icon-button id="edit-btn" (click)="openDialogModifyInvestigation()">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="warn" (click)="openDialogDeleteInvestigation()">
+                <button mat-icon-button id="delete-btn" (click)="openDialogDeleteInvestigation()">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
