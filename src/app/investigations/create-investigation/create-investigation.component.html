@@ -1,0 +1,25 @@
+<mat-card class="container">
+    <label >Create investigation</label>
+    <hr>
+    <div>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name of the investigation"> 
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+                <textarea matInput placeholder="Description" matTextareaAutosize
+                        matAutosizeMinRows="1"
+                        matAutosizeMaxRows="4"></textarea>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Members"> 
+        </mat-form-field>
+    </div>
+
+    <button mat-button class="font-config" id="add-btn" type="submit" >Add
+    <mat-icon>near_me</mat-icon>
+    </button>
+</mat-card>
