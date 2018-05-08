@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectsComponent } from './projects/projects.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
@@ -15,14 +14,14 @@ import { ShowProjectsComponent } from './show-projects/show-projects.component';
     SharedModule
   ],
   declarations: [
-    ProjectsComponent, 
+    ShowProjectsComponent, 
     EditProjectComponent, 
     CreateProjectComponent, 
     ProjectDetailsComponent, 
     ShowProjectsComponent
   ],
   exports: [
-    ProjectsComponent
+    ShowProjectsComponent
   ]
 })
 export class ProjectsModule { }

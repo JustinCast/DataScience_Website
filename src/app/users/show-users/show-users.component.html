@@ -1,3 +1,6 @@
+<button mat-fab (click)="openDialogCreateUser()" color="primary" style="float: right;margin: 0%; background-color: grey" >
+    Add 
+ </button>
 <mat-card id="search-user-card">
         <mat-form-field class="input-container">
             <input matInput placeholder="Search User">
@@ -14,13 +17,13 @@
                     User 1
                 </div>
                 <div id="actions-container">
-                    <button mat-icon-button color="primary">
+                    <button mat-icon-button  style="color: blue" (click)="openDialogDetailsUser()">
                         <mat-icon>visibility</mat-icon>
                     </button>
-                    <button mat-icon-button color="primary">
+                    <button mat-icon-button style="color: rgba(88, 228, 23, 0.932)" (click)="openDialogModifyUser()">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button color="warn">
+                    <button mat-icon-button style="color: red" (click)="openDialogDeleteInvestigation()">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </div>

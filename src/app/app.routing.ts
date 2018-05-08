@@ -1,19 +1,18 @@
 import { Routes } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
-import { ProjectsComponent } from "./projects/projects/projects.component";
-import { UsersComponent }from './users/users/users.component';
-import { ProposalComponent} from './proposals/proposal/proposal.component';
 import { ReferenceComponent} from './references/reference/reference.component'
 import { ShowInvestigationsComponent } from "./investigations/show-investigations/show-investigations.component";
+import { ShowProposalComponent } from "./proposals/show-proposal/show-proposal.component";
+import { ShowUsersComponent } from "./users/show-users/show-users.component";
 export const ROUTES : Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent },
-    { path: 'projects', component: ProjectsComponent},
-    { path: 'users', component: UsersComponent},
-    { path: 'proposals', component: ProposalComponent},
+    { path: 'show-projects', component: ShowUsersComponent},
+    {path:  'show-users', component: ShowUsersComponent},
     { path: 'references', component: ReferenceComponent},
-    { path: 'show-investigations', component: ShowInvestigationsComponent}
+    { path: 'show-investigations', component: ShowInvestigationsComponent},
+    { path: 'show-proposals', component: ShowProposalComponent}
 
 ]

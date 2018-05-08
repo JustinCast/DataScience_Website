@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, Inject } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
-import { MatPaginator } from "@angular/material";
+import { MatPaginator, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 @Component({
   selector: 'app-create-project',
   templateUrl: './create-project.component.html',
@@ -34,7 +34,13 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<CreateProjectComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
   ngOnInit() {
   }

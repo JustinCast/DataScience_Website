@@ -1,5 +1,5 @@
 <button mat-fab (click)="openDialogCreateInvestigation()" color="primary" style="float: right;margin: 0%; background-color: grey" >
-    <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+   Add 
 </button>
 
 <mat-card id="search-investigation-card">
@@ -18,13 +18,13 @@
                 Investigation 1
             </div>
             <div id="actions-container">
-                <button mat-icon-button color="primary" >
+                <button mat-icon-button color="primary" (click)="openDialogDetailsInvestigation()">
                     <mat-icon>visibility</mat-icon>
                 </button>
                 <button mat-icon-button color="primary" (click)="openDialogModifyInvestigation()">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="warn">
+                <button mat-icon-button color="warn" (click)="openDialogDeleteInvestigation()">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
