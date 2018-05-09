@@ -21,7 +21,7 @@
                 <button mat-icon-button id="view-btn" (click)="openDialogDetailsProject()">
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-icon-button id="edit-btn" (click)="openDialogModifyProject()">
+                <button mat-icon-button id="edit-btn" [routerLink]="['/edit-project']">
                     <mat-icon>edit</mat-icon>
                 </button>
                 <button mat-icon-button id="delete-btn" (click)="openDialogDeleteProject()">
