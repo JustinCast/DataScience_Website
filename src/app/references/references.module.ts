@@ -11,14 +11,16 @@ import { referencesRoutingModule } from './references-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { AddPageComponent } from './add-page/add-page.component';
 import { AddCodeComponent } from './add-code/add-code.component';
+import { ShowPagesComponent } from '../pages/show-pages/show-pages.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     referencesRoutingModule,
-    SharedModule
-
+    SharedModule,    
+    PagesModule,
+    CodesModule
   ],
   declarations: [
     ReferenceComponent,

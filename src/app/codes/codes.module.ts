@@ -18,7 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     DetailsCodeComponent
   ],
   exports:[
-    
+    ShowCodesComponent
   ]
 })
 export class CodesModule { }

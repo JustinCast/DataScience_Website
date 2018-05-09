@@ -1,4 +1,16 @@
-<mat-toolbar class="toolbar">
+<mat-tab-group style="width: 90%; background-color: white; color: black" class="container">
+    <mat-tab label="Manage References">
+        <app-show-references></app-show-references>
+    </mat-tab>
+    <mat-tab label="Manage Pages">
+        <app-show-pages></app-show-pages>
+    </mat-tab>
+    <mat-tab label="Manage Codes">
+        <app-show-codes></app-show-codes>
+    </mat-tab>
+</mat-tab-group>
+
+<!-- <mat-toolbar class="toolbar">
     <mat-list class="list" role="list">
         <button mat-button [matMenuTriggerFor]="references">References
           <mat-icon>folder</mat-icon>
@@ -16,9 +28,8 @@
     </mat-list>
 </mat-toolbar>
 <hr>
-
 <mat-menu #references>
-  <button mat-menu-item [routerLink]="['show-references']">
+  <button mat-menu-item [routerLink]="['/show-references']">
       <mat-icon>visibility</mat-icon>
       Show References  
   </button>
@@ -48,7 +59,7 @@
       <mat-icon>add_to_photos</mat-icon>
       Create page
   </button>
-</mat-menu>
+</mat-menu> -->
 
 <div class="container">
 <router-outlet></router-outlet>
