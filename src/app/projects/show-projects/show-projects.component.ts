@@ -22,7 +22,7 @@ export class ShowProjectsComponent implements OnInit {
 
   openDialogModifyProject(): void {
     let dialogRef = this.dialog.open(EditProjectComponent, {
-      width: '35%',
+      width: '60%',
     });
   }
 

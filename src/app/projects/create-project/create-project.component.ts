@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, Inject } from '@angular/co
 import { MatTableDataSource } from '@angular/material/table';
 import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
 import { MatPaginator } from "@angular/material";
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-create-project',
   templateUrl: './create-project.component.html',
@@ -34,9 +35,15 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor() { }
+  constructor(
+    private _location: Location
+  ) { }
 
   ngOnInit() {
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
   /**

@@ -1,0 +1,17 @@
+@import "../../variables";
+mat-form-field{
+    width: 100%
+}
+.delete-btn{
+    right: 0;
+    margin-right: 0
+}
+.actions-container{
+    text-align: right;
+    margin: auto;
+    margin-right: 0;
+    width: 80%
+}
+.delete-btn{
+    color:$delete-btn;
+}
