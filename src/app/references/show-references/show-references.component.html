@@ -2,10 +2,13 @@
     <mat-form-field class="input-container">
         <input matInput placeholder="Search reference">
     </mat-form-field>
-    <button mat-icon-button color="primary">
+    <button mat-icon-button color="primary" >
         <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
     </button>
 </mat-card>
+<button mat-fab color="primary"  id="add-btn" (click)="openDialogCreateReference()">
+    Add 
+</button>
         
 <div id="project-admin-container" class="container card">
     <mat-list style="width: 100%; padding: 0; margin-bottom: 1%">
@@ -14,13 +17,13 @@
                 Reference 1
             </div>
             <div id="actions-container">
-                <button mat-icon-button id="view-btn">
+                <button mat-icon-button id="view-btn"  (click)="openDialogDetailsReference()">
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-icon-button id="edit-btn">
+                <button mat-icon-button id="edit-btn"  (click)="openDialogModifyReference()">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button id="delete-btn">
+                <button mat-icon-button id="delete-btn"  (click)="openDialogDeleteReference()">
                     <mat-icon>delete</mat-icon>
                 </button>
                 <button mat-icon-button [matMenuTriggerFor]="options">
@@ -70,11 +73,11 @@
 </div>
 
 <mat-menu #options>
-        <button mat-menu-item [routerLink]="['add-code']">
+        <button mat-menu-item (click)="openDialogAddCode()">
             <mat-icon>code</mat-icon>
             Add code  
         </button>
-        <button mat-menu-item [routerLink]="['add-page']">
+        <button mat-menu-item (click)="openDialogAddPage()">
             <mat-icon>public</mat-icon>
             Add Page 
         </button>

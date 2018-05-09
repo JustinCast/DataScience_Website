@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-modify-page',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModifyPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<ModifyPageComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+  
   ngOnInit() {
   }
 

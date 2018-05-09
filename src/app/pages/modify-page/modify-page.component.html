@@ -1,3 +1,24 @@
-<p>
-  modify-page works!
-</p>
+<mat-card class="container">
+  <div>
+      <label>Modify page</label>
+    </div>
+  <div>
+      <mat-form-field>
+          <input matInput type="text" placeholder="Title"> 
+      </mat-form-field>
+  </div>
+  <div>
+      <mat-form-field>
+          <input matInput type="url" placeholder="Link"> 
+      </mat-form-field>
+  </div>
+  <div>
+      <mat-form-field>
+          <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2"
+                    matAutosizeMaxRows="4"></textarea>
+        </mat-form-field>
+  </div>
+  <button mat-button class="font-config" id="add-btn" type="submit" >Modify
+    <mat-icon>near_me</mat-icon>
+  </button>
+</mat-card>
