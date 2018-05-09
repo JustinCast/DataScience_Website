@@ -17,11 +17,15 @@ import { ShowProjectsComponent } from './show-projects/show-projects.component';
     ShowProjectsComponent, 
     EditProjectComponent, 
     CreateProjectComponent, 
-    ProjectDetailsComponent, 
-    ShowProjectsComponent
+    ProjectDetailsComponent
   ],
   exports: [
     ShowProjectsComponent
+  ],
+  entryComponents:[
+    EditProjectComponent, 
+    CreateProjectComponent, 
+    ProjectDetailsComponent, 
   ]
 })
 export class ProjectsModule { }

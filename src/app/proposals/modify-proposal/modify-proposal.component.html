@@ -1,0 +1,34 @@
+<mat-card class="container">
+    <label>Modify proposal</label>
+    <hr>
+    <div>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name of the proposal"> 
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+                <textarea matInput placeholder="Description" matTextareaAutosize
+                        matAutosizeMinRows="1"
+                        matAutosizeMaxRows="4"></textarea>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-select placeholder="Thematic">
+                <mat-option *ngFor="let thematic of thematics" [value]="Thematic.value">
+                {{ Thematic.viewValue }}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Proponents"> 
+        </mat-form-field>
+    </div>
+
+    <button mat-button class="font-config" id="add-btn" type="submit" >Modify
+    <mat-icon>near_me</mat-icon>
+    </button>
+</mat-card>
