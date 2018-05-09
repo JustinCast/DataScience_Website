@@ -3,7 +3,7 @@
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
   </button>
 </div>
-<mat-card scrollable id="create-project-card">
+<mat-card id="create-project-card">
   <form class="container">
     <mat-form-field>
         <input matInput placeholder="Nombre del proyecto">
@@ -41,53 +41,53 @@
             <h5 style="margin-top: 2%" class="text-center">Añadir miembro</h5>
           </mat-expansion-panel-header>
           <div class="example-container mat-elevation-z8">
-              <div class="example-header">
-                <mat-form-field>
-                  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
-                </mat-form-field>
-              </div>
-            
-              <mat-table #table [dataSource]="dataSource">  
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                  <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-                </ng-container>
-            
-                <!-- LastName Column -->
-                <ng-container matColumnDef="lastName">
-                  <mat-header-cell *matHeaderCellDef> Apellidos </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
-                </ng-container>
-            
-                <!-- ProjectCount Column -->
-                <ng-container matColumnDef="projectCount">
-                  <mat-header-cell *matHeaderCellDef> Cantidad de Proyectos </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.projectCount}} </mat-cell>
-                </ng-container>
-
-                <!-- Actions Column -->
-                <ng-container matColumnDef="actions">
-                  <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
-                  <mat-cell *matCellDef="let element">
-                    <button mat-button (click)="addMember(element); false">Agregar</button>
-                  </mat-cell>
-                </ng-container>
-            
-                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-              </mat-table>
-              <mat-paginator #paginator
-                  [pageSize]="7"
-                  [pageSizeOptions]="[5, 10, 20]"
-                  [showFirstLastButtons]="true">
-              </mat-paginator>
+            <div class="example-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+              </mat-form-field>
             </div>
-            <mat-list class="added" *ngIf="addedMembers.length !== 0">
-              <mat-list-item *ngFor="let am of addedMembers">
-                {{am}}
-              </mat-list-item>
-            </mat-list>
+          
+            <mat-table #table [dataSource]="dataSource">  
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+              </ng-container>
+          
+              <!-- LastName Column -->
+              <ng-container matColumnDef="lastName">
+                <mat-header-cell *matHeaderCellDef> Apellidos </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
+              </ng-container>
+          
+              <!-- ProjectCount Column -->
+              <ng-container matColumnDef="projectCount">
+                <mat-header-cell *matHeaderCellDef> Cantidad de Proyectos </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.projectCount}} </mat-cell>
+              </ng-container>
+
+              <!-- Actions Column -->
+              <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <button mat-button (click)="addMember(element); false">Agregar</button>
+                </mat-cell>
+              </ng-container>
+          
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+            </mat-table>
+            <mat-paginator #paginator
+                [pageSize]="7"
+                [pageSizeOptions]="[5, 10, 20]"
+                [showFirstLastButtons]="true">
+            </mat-paginator>
+          </div>
+          <mat-list class="added" *ngIf="addedMembers.length !== 0">
+            <mat-list-item *ngFor="let am of addedMembers">
+              {{am}}
+            </mat-list-item>
+          </mat-list>
       </mat-expansion-panel>
     </mat-accordion>
   </form>

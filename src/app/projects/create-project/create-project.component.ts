@@ -63,7 +63,7 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
 
 }
 
-const ELEMENT_DATA: MemberToDisplay[] = [
+let ELEMENT_DATA: MemberToDisplay[] = [
   {name: 'Justin', lastName: "Castillo", projectCount: 3},
   {name: 'Albert', lastName: "González", projectCount: 2},
   {name: 'Francisco', lastName: "Corrales", projectCount: 1},
