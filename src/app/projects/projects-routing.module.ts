@@ -11,9 +11,9 @@ const ROUTES: Routes = [
             children: [
                 { path: 'project/:id', component: ProjectDetailsComponent },
                 { path: 'edit-project/:id', component: EditProjectComponent },
-                { path: 'create-project', component: CreateProjectComponent }
             ]
     },
+    { path: 'create-project', component: CreateProjectComponent }
 ]
 
 @NgModule({

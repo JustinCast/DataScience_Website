@@ -1,4 +1,4 @@
-<mat-card id="create-project-card">
+<mat-card scrollable id="create-project-card">
   <form class="container">
     <mat-form-field>
         <input matInput placeholder="Nombre del proyecto">
@@ -29,7 +29,7 @@
         {{ar}}
       </mat-list-item>
     </mat-list>
-    <mat-accordion>
+    <mat-accordion style="overflow: scroll;">
         <mat-expansion-panel (opened)="panelOpenState = true"
         (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
