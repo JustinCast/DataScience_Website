@@ -17,12 +17,27 @@ import { ReferencesModule} from './references/references.module'
 import { CodesModule } from './codes/codes.module';
 import { PagesModule } from './pages/pages.module';
 import { InvestigationsModule } from './investigations/investigations.module';
+import { BlogModule } from './blog/blog.module';
+import { MembersTableComponent } from './tables/members-table/members-table.component';
+import { ThematicsTableComponent } from './tables/thematics-table/thematics-table.component';
+import { ReferencesTableComponent } from './tables/references-table/references-table.component';
+import { InvestigationsTableComponent } from './tables/investigations-table/investigations-table.component';
+import { PagesTableComponent } from './tables/pages-table/pages-table.component';
+import { CodesTableComponent } from './tables/codes-table/codes-table.component';
+import { MilestonesTableComponent } from './tables/milestones-table/milestones-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
+    MembersTableComponent,
+    ThematicsTableComponent,
+    ReferencesTableComponent,
+    InvestigationsTableComponent,
+    PagesTableComponent,
+    CodesTableComponent,
+    MilestonesTableComponent,
     
   ],
   imports: [
@@ -36,7 +51,8 @@ import { InvestigationsModule } from './investigations/investigations.module';
     ReferencesModule,
     CodesModule,
     PagesModule,
-    InvestigationsModule
+    InvestigationsModule,
+    BlogModule
 
   ],
   providers: [],
