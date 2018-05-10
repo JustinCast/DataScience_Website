@@ -12,13 +12,9 @@
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field>
-            <mat-select placeholder="Thematic">
-                <mat-option *ngFor="let thematic of thematics" [value]="Thematic.value">
-                {{ Thematic.viewValue }}
-                </mat-option>
-            </mat-select>
-            </mat-form-field>
+        <button mat-button class="font-config" id="add-btn" type="submit">Thematics
+            <mat-icon>near_me</mat-icon>
+        </button>
     </div>
     <div>
         <mat-form-field>
