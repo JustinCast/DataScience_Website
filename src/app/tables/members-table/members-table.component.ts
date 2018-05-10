@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, Inject } from '@angular/core';
 import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-members-table',
@@ -18,7 +19,10 @@ export class MembersTableComponent implements OnInit, AfterViewInit {
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor() { }
+
+  constructor(
+    public dialogRef: MatDialogRef<MembersTableComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
   }
@@ -29,6 +33,10 @@ export class MembersTableComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
   addMember(i) {

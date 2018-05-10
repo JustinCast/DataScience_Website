@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, AfterViewInit, Inject } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
-import { MatPaginator } from "@angular/material";
+import { MatPaginator, MatDialog } from "@angular/material";
 import { Location } from '@angular/common';
+import { MembersTableComponent } from '../../tables/members-table/members-table.component';
 @Component({
   selector: 'app-create-project',
   templateUrl: './create-project.component.html',
@@ -27,10 +28,19 @@ export class CreateProjectComponent implements OnInit {
   addedReferences = []
 
   constructor(
-    private _location: Location
+    private _location: Location,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit() {
+  }
+
+  onAddMembersClick(): boolean {
+    let dialogRef = this.dialog.open(MembersTableComponent, {
+      width: '70%',
+      height: '50%'
+    });
+    return false
   }
 
   backClicked() {

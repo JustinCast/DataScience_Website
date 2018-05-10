@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { RouterModule } from "@angular/router";
-
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
@@ -54,6 +53,9 @@ import { MilestonesTableComponent } from './tables/milestones-table/milestones-t
     InvestigationsModule,
     BlogModule
 
+  ],
+  entryComponents: [
+    MembersTableComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
