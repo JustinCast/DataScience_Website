@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit, Inject } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
-import { MatPaginator, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
+import { MatPaginator } from "@angular/material";
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-create-project',
   templateUrl: './create-project.component.html',
@@ -35,14 +36,14 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
     this.dataSource.filter = filterValue;
   }
   constructor(
-    public dialogRef: MatDialogRef<CreateProjectComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+    private _location: Location
+  ) { }
 
   ngOnInit() {
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
   /**
@@ -62,7 +63,7 @@ export class CreateProjectComponent implements OnInit, AfterViewInit {
 
 }
 
-const ELEMENT_DATA: MemberToDisplay[] = [
+let ELEMENT_DATA: MemberToDisplay[] = [
   {name: 'Justin', lastName: "Castillo", projectCount: 3},
   {name: 'Albert', lastName: "González", projectCount: 2},
   {name: 'Francisco', lastName: "Corrales", projectCount: 1},

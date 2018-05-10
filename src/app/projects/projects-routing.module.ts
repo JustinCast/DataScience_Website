@@ -10,10 +10,10 @@ const ROUTES: Routes = [
         path: 'show-projects', component: ShowProjectsComponent,
             children: [
                 { path: 'project/:id', component: ProjectDetailsComponent },
-                { path: 'edit-project/:id', component: EditProjectComponent },
-                { path: 'create-project', component: CreateProjectComponent }
             ]
     },
+    { path: 'edit-project', component: EditProjectComponent },
+    { path: 'create-project', component: CreateProjectComponent }
 ]
 
 @NgModule({

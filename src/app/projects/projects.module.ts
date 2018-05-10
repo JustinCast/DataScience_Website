@@ -23,8 +23,6 @@ import { ShowProjectsComponent } from './show-projects/show-projects.component';
     ShowProjectsComponent
   ],
   entryComponents:[
-    EditProjectComponent, 
-    CreateProjectComponent, 
     ProjectDetailsComponent, 
   ]
 })

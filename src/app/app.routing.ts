@@ -10,7 +10,7 @@ export const ROUTES : Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'show-projects', component: ShowUsersComponent},
-    {path:  'show-users', component: ShowUsersComponent},
+    { path:  'show-users', component: ShowUsersComponent },
     { path: 'references', component: ReferenceComponent},
     { path: 'show-investigations', component: ShowInvestigationsComponent},
     { path: 'show-proposals', component: ShowProposalComponent}

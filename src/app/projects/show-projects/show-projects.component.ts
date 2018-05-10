@@ -16,19 +16,19 @@ export class ShowProjectsComponent implements OnInit {
   
   openDialogCreateProject(): void {
     let dialogRef = this.dialog.open(CreateProjectComponent, {
-      width: '35%',
+      width: '90%',
     });
   }
 
   openDialogModifyProject(): void {
     let dialogRef = this.dialog.open(EditProjectComponent, {
-      width: '35%',
+      width: '60%',
     });
   }
 
   openDialogDetailsProject(): void {
     let dialogRef = this.dialog.open(ProjectDetailsComponent, {
-      width: '60%',
+      width: '90%',
     });
   }
 
