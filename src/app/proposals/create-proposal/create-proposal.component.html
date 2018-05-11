@@ -11,17 +11,19 @@
                         matAutosizeMaxRows="4"></textarea>
         </mat-form-field>
     </div>
+    <hr>
     <div>
-        <button mat-button class="font-config" id="add-btn" type="submit">Thematics
+        <button mat-button class="font-config" id="add-btn" type="submit" (click)="openDialogAddThematic()">Thematics
             <mat-icon>near_me</mat-icon>
         </button>
     </div>
+    <hr>
     <div>
-        <mat-form-field>
-            <input matInput type="text" placeholder="Proponents"> 
-        </mat-form-field>
+        <button mat-button class="font-config" id="add-btn" type="submit" >Proponents
+            <mat-icon>near_me</mat-icon>
+        </button>
     </div>
-
+    <hr>
     <button mat-button class="font-config" id="add-btn" type="submit" >Add
     <mat-icon>near_me</mat-icon>
     </button>

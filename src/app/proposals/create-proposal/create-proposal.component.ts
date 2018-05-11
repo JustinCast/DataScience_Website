@@ -9,12 +9,14 @@ import { ThematicsTableComponent } from '../../tables/thematics-table/thematics-
 })
 export class CreateProposalComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<CreateProposalComponent>,@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(public dialog: MatDialog) { }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  openDialogAddThematic(): void {
+    let dialogRef = this.dialog.open(ThematicsTableComponent, {
+      width: '70%',
+    });
   }
-  
+
   ngOnInit() {
   }
 

@@ -11,8 +11,13 @@ import { ThematicToDisplay } from '../../models/ThematicToDisplay.interface';
 })
 export class ThematicsTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<ThematicsTableComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
   ngOnInit() {
   }
 
