@@ -1,4 +1,7 @@
-<mat-card class="container">
+<mat-card class="container" >
+        <button mat-mini-fab routerLink='/show-proposals' style=" background-color: transparent; color: black; float: left;">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
     <label>Modify proposal</label>
     <hr>
     <div>
@@ -14,20 +17,14 @@
         </mat-form-field>
     </div>
     <div>
-        <mat-form-field>
-            <mat-select placeholder="Thematic">
-                <mat-option *ngFor="let thematic of thematics" [value]="Thematic.value">
-                {{ Thematic.viewValue }}
-                </mat-option>
-            </mat-select>
-            </mat-form-field>
+        <button mat-button (click)='openDialogThematic()' class="font-config" id="add-btn" >Thematic
+            <mat-icon>add</mat-icon>
+        </button>
+        <button mat-button class="font-config" id="add-btn" style="margin-left: 2%" >Proponents
+            <mat-icon>add</mat-icon>
+        </button>
     </div>
-    <div>
-        <mat-form-field>
-            <input matInput type="text" placeholder="Proponents"> 
-        </mat-form-field>
-    </div>
-
+    <hr>
     <button mat-button class="font-config" id="add-btn" type="submit" >Modify
     <mat-icon>near_me</mat-icon>
     </button>

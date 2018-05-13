@@ -11,12 +11,12 @@ export class CreateProposalComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
-  openDialogAddThematic(): void {
+  openDialogThematic(): void {
     let dialogRef = this.dialog.open(ThematicsTableComponent, {
       width: '70%',
     });
   }
-
+  
   ngOnInit() {
   }
 

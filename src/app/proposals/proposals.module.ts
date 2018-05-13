@@ -24,7 +24,6 @@ import { ThematicsTableComponent } from '../tables/thematics-table/thematics-tab
   ],
   entryComponents:[
     ThematicsTableComponent,
-    ModifyProposalComponent,
     DetailsProposalComponent
   ]
 })
