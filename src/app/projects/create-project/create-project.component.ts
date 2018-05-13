@@ -4,6 +4,7 @@ import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
 import { MatPaginator, MatDialog } from "@angular/material";
 import { Location } from '@angular/common';
 import { MembersTableComponent } from '../../tables/members-table/members-table.component';
+import { InvestigationsTableComponent } from '../../tables/investigations-table/investigations-table.component';
 @Component({
   selector: 'app-create-project',
   templateUrl: './create-project.component.html',
@@ -37,6 +38,14 @@ export class CreateProjectComponent implements OnInit {
 
   onAddMembersClick(): boolean {
     let dialogRef = this.dialog.open(MembersTableComponent, {
+      width: '70%',
+      height: '50%'
+    });
+    return false
+  }
+
+  onAddInvestigationsClick(): boolean {
+    let dialogRef = this.dialog.open(InvestigationsTableComponent, {
       width: '70%',
       height: '50%'
     });

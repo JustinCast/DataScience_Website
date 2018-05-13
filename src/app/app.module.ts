@@ -55,7 +55,8 @@ import { MilestonesTableComponent } from './tables/milestones-table/milestones-t
 
   ],
   entryComponents: [
-    MembersTableComponent
+    MembersTableComponent,
+    InvestigationsTableComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

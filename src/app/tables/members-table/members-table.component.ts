@@ -22,7 +22,8 @@ export class MembersTableComponent implements OnInit, AfterViewInit {
 
   constructor(
     public dialogRef: MatDialogRef<MembersTableComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) { }
 
   ngOnInit() {
   }
