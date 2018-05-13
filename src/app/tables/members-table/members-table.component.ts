@@ -3,6 +3,7 @@ import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-members-table',
@@ -12,8 +13,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 export class MembersTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  selection = new SelectionModel<MemberToDisplay>(true, []);
   addedMembers = []
-  displayedColumns = ['name', 'lastName', 'projectCount', 'actions'];
+  displayedColumns = ['selection', 'name', 'lastName', 'projectCount'];
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
