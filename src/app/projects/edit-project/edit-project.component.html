@@ -1,4 +1,9 @@
-<mat-card class="container">
+<div style="margin-top: 2%; margin-right: 2%" class="container">
+  <button class="btn danger-color btn-sm pull-left" (click)="backClicked()">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+</div>
+<mat-card id="edit-project-card">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Nuevo nombre">
   </mat-form-field>

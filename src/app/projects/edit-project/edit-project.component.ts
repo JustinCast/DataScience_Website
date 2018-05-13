@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, ViewChild, AfterViewInit } from '@angular/co
 import { MemberToDisplay } from '../../models/MemberToDisplay.interface';
 import { MatPaginator } from "@angular/material";
 import { MatTableDataSource } from '@angular/material/table';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-edit-project',
   templateUrl: './edit-project.component.html',
@@ -19,7 +20,9 @@ export class EditProjectComponent implements OnInit, AfterViewInit {
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor() { }
+  constructor(
+    private _location: Location
+  ) { }
 
   ngOnInit() {
   }
@@ -30,6 +33,10 @@ export class EditProjectComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
   changeDisplayState(){

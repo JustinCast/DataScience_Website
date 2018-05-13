@@ -6,12 +6,13 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ShowProjectsComponent } from './show-projects/show-projects.component';
+import { MembersTableComponent } from '../tables/members-table/members-table.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     ShowProjectsComponent, 
@@ -23,7 +24,7 @@ import { ShowProjectsComponent } from './show-projects/show-projects.component';
     ShowProjectsComponent
   ],
   entryComponents:[
-    ProjectDetailsComponent, 
+    ProjectDetailsComponent
   ]
 })
 export class ProjectsModule { }
