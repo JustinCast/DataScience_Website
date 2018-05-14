@@ -13,7 +13,6 @@ export class InvestigationsTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   selection = new SelectionModel<Investigation>(true, []);
-  addedMembers = []
   displayedColumns = ['selection', 'inv_name', 'inv_description', 'inv_members', 'inv_start_date', 'inv_finish_date'];
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace

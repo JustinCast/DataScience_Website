@@ -1,3 +1,80 @@
-<p>
-  proposal-table works!
-</p>
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+  </mat-form-field>
+</div>
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">  
+    <!-- Selection Column -->
+    <ng-container matColumnDef="selection">
+      <mat-header-cell *matHeaderCellDef> Selección </mat-header-cell>
+      <mat-cell *matCellDef="let row"> 
+        <mat-checkbox (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Prop ID Column -->
+    <ng-container matColumnDef="prop_id">
+      <mat-header-cell *matHeaderCellDef> ID Propuesta </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.prop_id}} </mat-cell>
+    </ng-container>
+
+    <!-- Prop Name Column -->
+    <ng-container matColumnDef="propName">
+      <mat-header-cell *matHeaderCellDef> Nombre Propuesta </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.propName}} </mat-cell>
+    </ng-container>
+
+    <!-- Proponents Column -->
+    <ng-container matColumnDef="proponents">
+      <mat-header-cell *matHeaderCellDef> Proponentes </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+        <ol style="list-style-type: none; text-align: center; padding: 0">
+          <li *ngFor="let p of element.proponents">
+            {{p.name}} {{p.lastName}} 
+          </li>
+        </ol>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Prop Name Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+    </ng-container>
+
+    <!-- Prop Date Column -->
+    <ng-container matColumnDef="propDate">
+      <mat-header-cell *matHeaderCellDef> Fecha Inicio </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.propDate | date}}</mat-cell>
+    </ng-container>
+
+    <!-- State Date Column -->
+    <ng-container matColumnDef="propState">
+      <mat-header-cell *matHeaderCellDef> Fecha Inicio </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.propState | date}}</mat-cell>
+    </ng-container>
+
+    <!-- Thematic Column -->
+    <ng-container matColumnDef="thematic">
+      <mat-header-cell *matHeaderCellDef> Temática </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.thematic.name}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="selection.toggle(row)"></mat-row>
+  </mat-table>
+</div>
+<mat-paginator #paginator
+    [pageSize]="15"
+    [pageSizeOptions]="[5, 10, 20]"
+    [showFirstLastButtons]="true">
+</mat-paginator>
+<mat-list class="added" *ngIf="addedMembers.length !== 0">
+  <mat-list-item *ngFor="let am of addedMembers">
+    {{am}}
+  </mat-list-item>
+</mat-list>
