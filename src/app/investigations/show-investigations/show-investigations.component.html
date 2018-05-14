@@ -18,16 +18,31 @@
                 Investigation 1
             </div>
             <div id="actions-container">
-                <button mat-icon-button id="view-btn" (click)="openDialogDetailsInvestigation()">
-                    <mat-icon>visibility</mat-icon>
-                </button>
-                <button mat-icon-button id="edit-btn" routerLink='/modify-investigation'>
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button id="delete-btn" (click)="openDialogDeleteInvestigation()">
-                    <mat-icon>delete</mat-icon>
+                <button mat-icon-button [matMenuTriggerFor]="options">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
                 </button>
             </div>
         </mat-list-item>
     </mat-list>
 </div>
+
+<mat-menu #options>
+    <div>
+        <button mat-button  id="view-btn" (click)="openDialogDetailsInvestigation()">
+            <mat-icon>visibility</mat-icon>
+            Details
+        </button>
+    </div>
+    <div>
+        <button mat-button id="edit-btn" routerLink='/modify-investigation'>
+            <mat-icon>edit</mat-icon>
+            Modify
+        </button>
+    </div>
+    <div>
+        <button mat-button id="delete-btn" (click)="openDialogDeleteInvestigation()">
+            <mat-icon>delete</mat-icon>
+            Delete
+        </button>
+    </div>
+</mat-menu>
