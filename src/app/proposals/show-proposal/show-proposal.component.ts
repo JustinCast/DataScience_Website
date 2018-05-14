@@ -20,12 +20,6 @@ export class ShowProposalComponent implements OnInit {
     });
   }
 
-  openDialogCreateProposal(): void {
-    let dialogRef = this.dialog.open(CreateProposalComponent, {
-      width: '35%',
-    });
-  }
-
   openDialogModifyProposal(): void {
     let dialogRef = this.dialog.open(ModifyProposalComponent, {
       width: '35%',

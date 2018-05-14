@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReferenceComponent } from './reference/reference.component';
 import { CreateReferenceComponent } from './create-reference/create-reference.component';
 import { ModifyReferenceComponent } from './modify-reference/modify-reference.component';
 import { DetailsReferenceComponent } from './details-reference/details-reference.component';
@@ -12,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AddPageComponent } from './add-page/add-page.component';
 import { AddCodeComponent } from './add-code/add-code.component';
 import { ShowPagesComponent } from '../pages/show-pages/show-pages.component';
+import { ReferenceComponent } from './reference/reference.component';
 
 
 @NgModule({
@@ -33,6 +33,13 @@ import { ShowPagesComponent } from '../pages/show-pages/show-pages.component';
     ],
     exports:[
       ReferenceComponent
+    ],
+    entryComponents:[
+      CreateReferenceComponent,
+      ModifyReferenceComponent,
+      DetailsReferenceComponent,
+      AddPageComponent,
+      AddCodeComponent
     ]
 })
 export class ReferencesModule { }

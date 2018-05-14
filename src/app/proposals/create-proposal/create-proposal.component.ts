@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material';
+import { ThematicsTableComponent } from '../../tables/thematics-table/thematics-table.component';
 
 @Component({
   selector: 'app-create-proposal',
@@ -8,13 +9,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class CreateProposalComponent implements OnInit {
 
-  constructor(
-    public dialogRef: MatDialogRef<CreateProposalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(public dialog: MatDialog) { }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  openDialogThematic(): void {
+    let dialogRef = this.dialog.open(ThematicsTableComponent, {
+      width: '70%',
+    });
   }
+  
   ngOnInit() {
   }
 

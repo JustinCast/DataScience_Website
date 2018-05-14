@@ -6,7 +6,7 @@
         <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
     </button>
 </mat-card>
-<button mat-fab color="primary" id="add-btn" >
+<button mat-fab color="primary" id="add-btn" (click)="openDialogCreatePage()">
     Add 
 </button>
 <div id="page-admin-container" class="container card">
@@ -16,13 +16,13 @@
                 Page 1
             </div>
             <div id="actions-container">
-                <button mat-icon-button id="view-btn">
+                <button mat-icon-button id="view-btn" (click)="openDialogDetailsCode()">
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-icon-button id="edit-btn">
+                <button mat-icon-button id="edit-btn" (click)="openDialogModifypage()">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button id="delete-btn">
+                <button mat-icon-button id="delete-btn" (click)="openDialogDeletePage()">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>

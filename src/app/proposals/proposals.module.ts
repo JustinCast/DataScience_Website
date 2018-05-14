@@ -6,6 +6,7 @@ import { ModifyProposalComponent } from './modify-proposal/modify-proposal.compo
 import { ShowProposalComponent } from './show-proposal/show-proposal.component';
 import { DetailsProposalComponent } from './details-proposal/details-proposal.component';
 import {proposalsRoutingModule} from './proposals-routing.module';
+import { ThematicsTableComponent } from '../tables/thematics-table/thematics-table.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -22,8 +23,7 @@ import {proposalsRoutingModule} from './proposals-routing.module';
     ShowProposalComponent
   ],
   entryComponents:[
-    CreateProposalComponent,
-    ModifyProposalComponent,
+    ThematicsTableComponent,
     DetailsProposalComponent
   ]
 })

@@ -9,10 +9,10 @@ import { ShowProposalComponent} from './show-proposal/show-proposal.component';
 const routes: Routes = [
     {path: 'show-proposals', component: ShowProposalComponent,
     children:[
-      {path: 'create-proposal', component: CreateProposalComponent},
-      {path: 'modify-proposal', component: ModifyProposalComponent},
       {path: 'details-proposal', component: DetailsProposalComponent},
-      ]}
+    ]},
+    {path: 'create-proposal', component: CreateProposalComponent},
+    {path: 'modify-proposal', component: ModifyProposalComponent}
 ];
 
 @NgModule({
