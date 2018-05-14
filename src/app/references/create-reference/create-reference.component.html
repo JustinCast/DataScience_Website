@@ -1,9 +1,26 @@
 <div class="container text-center card">
-  <form>
+  <form  class="container">
     <mat-form-field>
       <input type="text" matInput placeholder="Descripción">
     </mat-form-field>
-    <button mat-button class="font-config">Add
+    <button class="add" mat-button (click)="onAddPagesClick()">
+      Páginas
+      <mat-icon>add</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+    <br>
+    <button class="add" mat-button (click)="onAddCodesClick()">
+      Códigos
+      <mat-icon>add</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+    <button class="add" mat-button>
+      Añadir Documento
+      <mat-icon>attachment</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+    <br>
+    <button mat-button class="font-config">Añadir referencia
       <mat-icon>near_me</mat-icon>
     </button>
   </form>

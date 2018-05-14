@@ -4,8 +4,21 @@ button{
 }
 mat-form-field{
     margin: auto;
+    display: block;
     padding: 0;
-    margin-top: 0;
+    margin-top: 1%;
     margin-bottom: 0;
-    width: 90%
+    width: 90%;
+}
+.add{
+    background-color: #09af00;
+    color: white;
+}
+form{
+    margin: auto;
+    width: 90%;
+}
+button{
+    margin-top: 1%;
+    margin-bottom: 1% 
 }
