@@ -6,6 +6,7 @@ import { ModifyReferenceComponent } from '../modify-reference/modify-reference.c
 import { DetailsReferenceComponent } from '../details-reference/details-reference.component';
 import { AddCodeComponent } from '../add-code/add-code.component';
 import { AddPageComponent } from '../add-page/add-page.component';
+import { PagesTableComponent } from '../../tables/pages-table/pages-table.component';
 
 
 
@@ -47,8 +48,8 @@ export class ShowReferencesComponent implements OnInit {
     });
   }
   openDialogAddPage(): void {
-    let dialogRef = this.dialog.open(AddPageComponent, {
-      width: '60%',
+    let dialogRef = this.dialog.open(PagesTableComponent, {
+      width: '70%',
     });
   }
 

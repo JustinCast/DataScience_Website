@@ -12,6 +12,8 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { AddCodeComponent } from './add-code/add-code.component';
 import { ShowPagesComponent } from '../pages/show-pages/show-pages.component';
 import { ReferenceComponent } from './reference/reference.component';
+import { PagesTableComponent } from '../tables/pages-table/pages-table.component';
+import { CodesTableComponent } from '../tables/codes-table/codes-table.component';
 
 
 @NgModule({
@@ -39,7 +41,10 @@ import { ReferenceComponent } from './reference/reference.component';
       ModifyReferenceComponent,
       DetailsReferenceComponent,
       AddPageComponent,
-      AddCodeComponent
+      AddCodeComponent,
+      PagesTableComponent,
+      CodesTableComponent
+      
     ]
 })
 export class ReferencesModule { }
