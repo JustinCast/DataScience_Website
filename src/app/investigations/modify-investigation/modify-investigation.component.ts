@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material';
+import { MembersTableComponent } from '../../tables/members-table/members-table.component';
 
 @Component({
   selector: 'app-modify-investigation',
@@ -8,13 +9,14 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 })
 export class ModifyInvestigationComponent implements OnInit {
 
-    constructor(
-    public dialogRef: MatDialogRef<ModifyInvestigationComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(public dialog: MatDialog) { }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  openDialogMembers(): void {
+    let dialogRef = this.dialog.open(MembersTableComponent, {
+      width: '70%',
+    });
   }
+
   ngOnInit() {
   }
 

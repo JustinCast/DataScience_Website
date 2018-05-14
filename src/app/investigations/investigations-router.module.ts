@@ -9,11 +9,12 @@ const routes: Routes = [
     {
       path: 'show-investigations', component: ShowInvestigationsComponent,
         children: [
-          { path: 'create-investigation', component: CreateInvestigationComponent},
-          { path: 'modify-investigation', component: ModifyInvestigationComponent},
+          
           { path: 'details-investigation', component: DetailsInvestigationComponent}
         ]  
-    }
+    },
+    { path: 'create-investigation', component: CreateInvestigationComponent},
+    { path: 'modify-investigation', component: ModifyInvestigationComponent},
 ];
 
 @NgModule({

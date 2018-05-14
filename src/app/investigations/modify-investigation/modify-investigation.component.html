@@ -1,5 +1,8 @@
 <mat-card class="container">
-  <label >Modify investigation</label>
+    <button mat-mini-fab routerLink='/show-investigations'style="background-color: transparent; color: black; float: left;">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </button> 
+    <label >Modify investigation</label>
   <hr>
   <div>
       <mat-form-field>
@@ -13,14 +16,15 @@
                       matAutosizeMaxRows="4"></textarea>
       </mat-form-field>
   </div>
-  <div>
-      <mat-form-field>
-          <input matInput type="text" placeholder="Members"> 
-      </mat-form-field>
-  </div>
-
-  <button mat-button class="font-config" id="add-btn" type="submit" >Modify
-  <mat-icon>near_me</mat-icon>
-  </button>
+  <div style="margin-bottom: 3%">
+        <button mat-button class="font-config" id="add-btn" (click)='openDialogMembers()' >Members
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+    <div>
+        <button mat-button class="font-config" id="add-btn" type="submit" >Modify
+            <mat-icon>near_me</mat-icon>
+        </button>
+    </div>
 </mat-card>
 
