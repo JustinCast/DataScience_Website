@@ -13,12 +13,14 @@ import { MembersTableComponent } from '../tables/members-table/members-table.com
     CommonModule,
     ProjectsRoutingModule,
     SharedModule,
+
   ],
   declarations: [
     ShowProjectsComponent, 
     EditProjectComponent, 
     CreateProjectComponent, 
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+
   ],
   exports: [
     ShowProjectsComponent

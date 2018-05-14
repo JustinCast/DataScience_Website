@@ -37,7 +37,6 @@ import { MilestonesTableComponent } from './tables/milestones-table/milestones-t
     PagesTableComponent,
     CodesTableComponent,
     MilestonesTableComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -56,7 +55,8 @@ import { MilestonesTableComponent } from './tables/milestones-table/milestones-t
   ],
   entryComponents: [
     MembersTableComponent,
-    InvestigationsTableComponent
+    InvestigationsTableComponent,
+    MilestonesTableComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

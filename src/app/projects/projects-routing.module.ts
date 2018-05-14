@@ -5,6 +5,7 @@ import { EditProjectComponent } from "./edit-project/edit-project.component";
 import { ProjectDetailsComponent } from "./project-details/project-details.component";
 import { ShowProjectsComponent } from "./show-projects/show-projects.component";
 
+
 const ROUTES: Routes = [
     { 
         path: 'show-projects', component: ShowProjectsComponent,
@@ -13,7 +14,7 @@ const ROUTES: Routes = [
             ]
     },
     { path: 'edit-project', component: EditProjectComponent },
-    { path: 'create-project', component: CreateProjectComponent }
+    { path: 'create-project', component: CreateProjectComponent },
 ]
 
 @NgModule({
