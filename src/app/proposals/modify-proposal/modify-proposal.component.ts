@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material';
 import { ThematicsTableComponent } from '../../tables/thematics-table/thematics-table.component';
+import { MembersTableComponent } from '../../tables/members-table/members-table.component';
 
 @Component({
   selector: 'app-modify-proposal',
@@ -13,6 +14,12 @@ export class ModifyProposalComponent implements OnInit {
 
   openDialogThematic(): void {
     let dialogRef = this.dialog.open(ThematicsTableComponent, {
+      width: '70%',
+    });
+  }
+
+  openDialogMember(): void {
+    let dialogRef = this.dialog.open(MembersTableComponent, {
       width: '70%',
     });
   }
