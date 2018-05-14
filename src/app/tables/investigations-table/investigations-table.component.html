@@ -1,8 +1,8 @@
 <div class="example-header">
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
-    </mat-form-field>
-  </div>
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+  </mat-form-field>
+</div>
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource">  
     <!-- Selection Column -->
@@ -57,10 +57,10 @@
   </mat-table>
 </div>
 <mat-paginator #paginator
-      [pageSize]="15"
-      [pageSizeOptions]="[5, 10, 20]"
-      [showFirstLastButtons]="true">
-  </mat-paginator>
+    [pageSize]="15"
+    [pageSizeOptions]="[5, 10, 20]"
+    [showFirstLastButtons]="true">
+</mat-paginator>
 <mat-list class="added" *ngIf="addedMembers.length !== 0">
   <mat-list-item *ngFor="let am of addedMembers">
     {{am}}

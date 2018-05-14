@@ -17,31 +17,26 @@ import {ModifyPageComponent} from '../pages/modify-page/modify-page.component';
 import {DetailsPageComponent} from '../pages/details-page/details-page.component';
 import {ShowPagesComponent} from '../pages/show-pages/show-pages.component';
 
-
-
-
-
-
 const routes: Routes = [
     {
       path: 'references', component: ReferenceComponent,
         children: [
-          { path: 'create-reference', component: CreateReferenceComponent},
           { path: 'show-references', component: ShowReferencesComponent},
           { path: 'modify-reference', component: ModifyReferenceComponent},
           { path: 'details-reference', component: DetailsReferenceComponent},
-
+          
           { path: 'create-page', component: CreatePageComponent},
           { path: 'show-pages', component: ShowPagesComponent},
           { path: 'modify-page', component: ModifyPageComponent },
           { path: 'details-page', component: DetailsPageComponent},
-
+          
           { path: 'create-code', component: CreateCodeComponent },
           { path: 'show-codes', component: ShowCodesComponent},
           { path: 'modify-code', component: ModifyCodeComponent},
           { path: 'details-code', component: DetailsCodeComponent},
         ]  
-    }
+    },
+    { path: 'create-reference', component: CreateReferenceComponent},
 ];
 
 @NgModule({

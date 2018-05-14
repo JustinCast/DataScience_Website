@@ -1,3 +1,75 @@
-<p>
-  references-table works!
-</p>
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+  </mat-form-field>
+</div>
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">  
+    <!-- Selection Column -->
+    <ng-container matColumnDef="selection">
+      <mat-header-cell *matHeaderCellDef> Selección </mat-header-cell>
+      <mat-cell *matCellDef="let row"> 
+        <mat-checkbox (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <!-- ID Ref Column -->
+    <ng-container matColumnDef="ref_id">
+      <mat-header-cell *matHeaderCellDef> ID Referencia </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ref_id}} </mat-cell>
+    </ng-container>
+
+    <!-- Ref Description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+    </ng-container>
+
+    <!-- Pages Column -->
+    <ng-container matColumnDef="pages">
+      <mat-header-cell *matHeaderCellDef> Páginas </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+        <ol style="list-style-type: none; text-align: center; padding: 0">
+          <li *ngFor="let p of element.pages">
+            {{p.title}} <br> <a href="{{p.link}}">Link</a> 
+          </li>
+        </ol>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Codes Column -->
+    <ng-container matColumnDef="codes">
+      <mat-header-cell *matHeaderCellDef> Códigos </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+        <ol style="list-style-type: none; text-align: center; padding: 0">
+          <li *ngFor="let c of element.codes">
+            {{c.title}} <br> <p>{{c.body}}</p> 
+          </li>
+        </ol>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Docs Column -->
+    <ng-container matColumnDef="codes">
+      <mat-header-cell *matHeaderCellDef> Documentos </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+        <ol style="list-style-type: none; text-align: center; padding: 0">
+          <li *ngFor="let d of element.documents">
+            {{d}}
+          </li>
+        </ol>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="selection.toggle(row)"></mat-row>
+  </mat-table>
+</div>
+<mat-paginator #paginator
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 20]"
+    [showFirstLastButtons]="true">
+</mat-paginator>

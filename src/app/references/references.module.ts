@@ -28,16 +28,15 @@ import { CodesTableComponent } from '../tables/codes-table/codes-table.component
     ModifyReferenceComponent,
     DetailsReferenceComponent,
     ShowReferencesComponent,
-    ],
-    exports:[
-      ReferenceComponent
-    ],
-    entryComponents:[
-      CreateReferenceComponent,
-      ModifyReferenceComponent,
-      DetailsReferenceComponent,
-      PagesTableComponent,
-      CodesTableComponent 
-    ]
+  ],
+  exports:[
+    ReferenceComponent
+  ],
+  entryComponents:[
+    ModifyReferenceComponent,
+    DetailsReferenceComponent,
+    PagesTableComponent,
+    CodesTableComponent 
+  ]
 })
 export class ReferencesModule { }

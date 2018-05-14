@@ -6,7 +6,7 @@
         <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
     </button>
 </mat-card>
-<button mat-fab color="primary"  id="add-btn" (click)="openDialogCreateReference()">
+<button mat-fab color="primary"  id="add-btn" [routerLink]="['/create-reference']">
     Add 
 </button>
         
@@ -73,12 +73,12 @@
 </div>
 
 <mat-menu #options>
-        <button mat-menu-item (click)="openDialogAddCode()">
-            <mat-icon>code</mat-icon>
-            Add code  
-        </button>
-        <button mat-menu-item (click)="openDialogAddPage()">
-            <mat-icon>public</mat-icon>
-            Add Page 
-        </button>
-      </mat-menu>
+    <button mat-menu-item (click)="openDialogAddCode()">
+        <mat-icon>code</mat-icon>
+        Add code  
+    </button>
+    <button mat-menu-item (click)="openDialogAddPage()">
+        <mat-icon>public</mat-icon>
+        Add Page 
+    </button>
+</mat-menu>
