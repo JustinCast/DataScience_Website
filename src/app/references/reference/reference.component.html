@@ -1,14 +1,16 @@
-<mat-tab-group style="width: 90%; background-color: white; color: black" class="container">
-    <mat-tab label="Manage References">
-        <app-show-references></app-show-references>
-    </mat-tab>
-    <mat-tab label="Manage Pages">
-        <app-show-pages></app-show-pages>
-    </mat-tab>
-    <mat-tab label="Manage Codes">
-        <app-show-codes></app-show-codes>
-    </mat-tab>
-</mat-tab-group>
+<div  class="container">
+    <mat-tab-group style="background-color: white; color: black; width: 100%;" class="container">
+        <mat-tab label="Manage References">
+            <app-show-references></app-show-references>
+        </mat-tab>
+        <mat-tab label="Manage Pages">
+            <app-show-pages></app-show-pages>
+        </mat-tab>
+        <mat-tab label="Manage Codes">
+            <app-show-codes></app-show-codes>
+        </mat-tab>
+    </mat-tab-group>
+</div>
 <div class="container">
     <router-outlet></router-outlet>
 </div>

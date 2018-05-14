@@ -6,6 +6,11 @@ mat-form-field{
     margin-bottom: 0;
     width: 90%;
 }
+button{
+    background-color: #3F51B5;
+    color: white;
+  }
+
 .example-container {
     display: flex;
     flex-direction: column;
@@ -13,7 +18,7 @@ mat-form-field{
     min-width: 300px;
     overflow: auto;
 }
-  
+
 .mat-column-select {
-    overflow: visible;
+overflow: visible;
 }

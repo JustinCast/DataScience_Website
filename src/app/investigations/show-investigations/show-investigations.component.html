@@ -1,4 +1,4 @@
-<button mat-fab (click)="openDialogCreateInvestigation()" id="add-btn" color="primary">
+<button mat-fab id="add-btn" routerLink='/create-investigation' color="primary">
    Add 
 </button>
 
@@ -21,7 +21,7 @@
                 <button mat-icon-button id="view-btn" (click)="openDialogDetailsInvestigation()">
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-icon-button id="edit-btn" (click)="openDialogModifyInvestigation()">
+                <button mat-icon-button id="edit-btn" routerLink='/modify-investigation'>
                     <mat-icon>edit</mat-icon>
                 </button>
                 <button mat-icon-button id="delete-btn" (click)="openDialogDeleteInvestigation()">

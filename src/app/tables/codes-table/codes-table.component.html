@@ -1,3 +1,27 @@
-<p>
-  codes-table works!
-</p>
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+  </mat-form-field>
+</div>
+
+<mat-accordion  >
+  <div  *ngFor="let elem of dataSource">
+      <mat-expansion-panel>
+          Notes: {{elem.no}}
+        <mat-expansion-panel-header>
+          <mat-checkbox></mat-checkbox>
+         
+        </mat-expansion-panel-header>
+          code 
+      </mat-expansion-panel>
+  </div>
+</mat-accordion>
+
+<button mat-button style="margin: 2% 45% 2% 45%">
+  Accept
+</button>
+<mat-paginator #paginator
+    [pageSize]="15"
+    [pageSizeOptions]="[5, 10, 20]"
+    [showFirstLastButtons]="true">
+</mat-paginator>

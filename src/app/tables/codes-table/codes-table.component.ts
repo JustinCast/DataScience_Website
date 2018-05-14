@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { Code } from '../../models/Code.interface';
 
 @Component({
   selector: 'app-codes-table',
@@ -12,4 +14,22 @@ export class CodesTableComponent implements OnInit {
   ngOnInit() {
   }
 
+  public dataSource: Array <Code>= [
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
+  ];
+
+  
+  
+  
+  
 }
+

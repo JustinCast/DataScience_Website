@@ -12,18 +12,6 @@ import { ConfirmComponent } from '../../shared/confirm/confirm.component';
 export class ShowInvestigationsComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
-  
-  openDialogCreateInvestigation(): void {
-    let dialogRef = this.dialog.open(CreateInvestigationComponent, {
-      width: '35%',
-    });
-  }
-
-  openDialogModifyInvestigation(): void {
-    let dialogRef = this.dialog.open(ModifyInvestigationComponent, {
-      width: '35%',
-    });
-  }
 
   openDialogDetailsInvestigation(): void {
     let dialogRef = this.dialog.open(DetailsInvestigationComponent, {
