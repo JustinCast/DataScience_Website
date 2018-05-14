@@ -58,7 +58,8 @@ import { ProposalTableComponent } from './tables/proposal-table/proposal-table.c
   ],
   entryComponents: [
     MembersTableComponent,
-    InvestigationsTableComponent
+    InvestigationsTableComponent,
+    ProposalTableComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

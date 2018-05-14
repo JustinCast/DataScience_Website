@@ -5,6 +5,7 @@ import { MatPaginator, MatDialog } from "@angular/material";
 import { Location } from '@angular/common';
 import { MembersTableComponent } from '../../tables/members-table/members-table.component';
 import { InvestigationsTableComponent } from '../../tables/investigations-table/investigations-table.component';
+import { ProposalTableComponent } from '../../tables/proposal-table/proposal-table.component';
 @Component({
   selector: 'app-create-project',
   templateUrl: './create-project.component.html',
@@ -45,6 +46,13 @@ export class CreateProjectComponent implements OnInit {
 
   onAddInvestigationsClick(): boolean {
     let dialogRef = this.dialog.open(InvestigationsTableComponent, {
+      width: '70%'
+    });
+    return false
+  }
+
+  onAddProposalsClick(): boolean {
+    let dialogRef = this.dialog.open(ProposalTableComponent, {
       width: '70%'
     });
     return false

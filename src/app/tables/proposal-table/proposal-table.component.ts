@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
+import { MatPaginator, MatTableDataSource, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 import { Proposal } from '../../models/Proposal';
 
@@ -19,9 +19,23 @@ export class ProposalTableComponent implements OnInit {
     this.dataSource.filter = filterValue;
   }
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<ProposalTableComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
+  }
+
+  /**
+   * Set the paginator after the view init since this component will
+   * be able to query its view for the initialized paginator.
+   */
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }
