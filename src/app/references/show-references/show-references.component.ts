@@ -23,12 +23,6 @@ export class ShowReferencesComponent implements OnInit {
     });
   }
 
-  openDialogCreateReference(): void {
-    let dialogRef = this.dialog.open(CreateReferenceComponent, {
-      width: '35%',
-    });
-  }
-
   openDialogModifyReference(): void {
     let dialogRef = this.dialog.open(ModifyReferenceComponent, {
       width: '35%',
