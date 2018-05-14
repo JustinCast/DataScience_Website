@@ -1,27 +1,24 @@
-<div class="example-header">
-  <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
-  </mat-form-field>
-</div>
 
-<mat-accordion  >
-  <div  *ngFor="let elem of dataSource">
+
+<div class="example-container mat-elevation-z8">
+  <mat-accordion>
       <mat-expansion-panel>
-          Notes: {{elem.no}}
         <mat-expansion-panel-header>
-          <mat-checkbox></mat-checkbox>
-         
+          <mat-panel-title>
+            <mat-checkbox></mat-checkbox>
+          </mat-panel-title>
+          <mat-panel-title>
+              Title
+            </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
         </mat-expansion-panel-header>
-          code 
+        code 
       </mat-expansion-panel>
-  </div>
-</mat-accordion>
+    </mat-accordion>
+</div>
 
 <button mat-button style="margin: 2% 45% 2% 45%">
   Accept
 </button>
-<mat-paginator #paginator
-    [pageSize]="15"
-    [pageSizeOptions]="[5, 10, 20]"
-    [showFirstLastButtons]="true">
-</mat-paginator>
