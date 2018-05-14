@@ -6,6 +6,17 @@ mat-form-field{
     margin-bottom: 0;
     width: 90%;
 }
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    overflow: auto;
+}
+  
+.mat-column-select {
+    overflow: visible;
+}
 
 ol{
     list-style-type: none;
