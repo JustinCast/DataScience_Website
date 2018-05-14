@@ -4,9 +4,8 @@ import { ConfirmComponent } from '../../shared/confirm/confirm.component';
 import { CreateReferenceComponent } from '../create-reference/create-reference.component';
 import { ModifyReferenceComponent } from '../modify-reference/modify-reference.component';
 import { DetailsReferenceComponent } from '../details-reference/details-reference.component';
-import { AddCodeComponent } from '../add-code/add-code.component';
-import { AddPageComponent } from '../add-page/add-page.component';
 import { PagesTableComponent } from '../../tables/pages-table/pages-table.component';
+import { CodesTableComponent } from '../../tables/codes-table/codes-table.component';
 
 
 
@@ -43,10 +42,11 @@ export class ShowReferencesComponent implements OnInit {
   }
   
   openDialogAddCode(): void {
-    let dialogRef = this.dialog.open(AddCodeComponent, {
-      width: '60%',
+    let dialogRef = this.dialog.open(CodesTableComponent, {
+      width: '70%',
     });
   }
+
   openDialogAddPage(): void {
     let dialogRef = this.dialog.open(PagesTableComponent, {
       width: '70%',

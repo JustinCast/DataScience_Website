@@ -8,8 +8,6 @@ import { PagesModule } from '../pages/pages.module';
 import { CodesModule }from '../codes/codes.module';
 import { referencesRoutingModule } from './references-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { AddPageComponent } from './add-page/add-page.component';
-import { AddCodeComponent } from './add-code/add-code.component';
 import { ShowPagesComponent } from '../pages/show-pages/show-pages.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { PagesTableComponent } from '../tables/pages-table/pages-table.component';
@@ -30,8 +28,6 @@ import { CodesTableComponent } from '../tables/codes-table/codes-table.component
     ModifyReferenceComponent,
     DetailsReferenceComponent,
     ShowReferencesComponent,
-    AddPageComponent,
-    AddCodeComponent
     ],
     exports:[
       ReferenceComponent
@@ -40,11 +36,8 @@ import { CodesTableComponent } from '../tables/codes-table/codes-table.component
       CreateReferenceComponent,
       ModifyReferenceComponent,
       DetailsReferenceComponent,
-      AddPageComponent,
-      AddCodeComponent,
       PagesTableComponent,
-      CodesTableComponent
-      
+      CodesTableComponent 
     ]
 })
 export class ReferencesModule { }
