@@ -40,7 +40,7 @@
       <mat-header-cell *matHeaderCellDef> Upload name </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.upload_name}} </mat-cell>
     </ng-container>
-
+    
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"
               (click)="selection.toggle(row)">

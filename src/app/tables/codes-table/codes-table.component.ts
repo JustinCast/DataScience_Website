@@ -10,26 +10,8 @@ import { Code } from '../../models/Code.interface';
 export class CodesTableComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit() {
   }
-
-  public dataSource: Array <Code>= [
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-    {title:'Tematica', notes: 'Hydrogen', body: 'asfadfaf', upload_name: 'luis carlos'},
-  ];
-
-  
-  
-  
-  
 }
 
