@@ -24,6 +24,7 @@ import { InvestigationsTableComponent } from './tables/investigations-table/inve
 import { PagesTableComponent } from './tables/pages-table/pages-table.component';
 import { CodesTableComponent } from './tables/codes-table/codes-table.component';
 import { MilestonesTableComponent } from './tables/milestones-table/milestones-table.component';
+import { ProposalTableComponent } from './tables/proposal-table/proposal-table.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MilestonesTableComponent } from './tables/milestones-table/milestones-t
     PagesTableComponent,
     CodesTableComponent,
     MilestonesTableComponent,
+    ProposalTableComponent,
     
   ],
   imports: [
