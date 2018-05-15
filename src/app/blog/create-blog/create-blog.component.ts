@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ThematicsTableComponent } from '../../tables/thematics-table/thematics-table.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-create-blog',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateBlogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
-
+  openDialogThematic(): void {
+    let dialogRef = this.dialog.open(ThematicsTableComponent, {
+      width: '70%',
+    });
+  }
 }

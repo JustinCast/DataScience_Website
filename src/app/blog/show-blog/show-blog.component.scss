@@ -1,0 +1,54 @@
+@import "../../variables";
+
+input{
+    width: 70%;
+    margin: auto
+}
+.input-container{
+    width: 80%;
+}
+ul{
+    color: white
+}
+#actions-container{
+    text-align: right;
+    margin: auto;
+    margin-right: 0;
+    width: 90%
+}
+#blog-admin-container {
+    background-color: #EEEEEE;
+    width: 100%;
+}
+#search-blog-card{
+    background-color:rgba(255,255,255, 0.8);
+    margin: auto;
+    margin-bottom: 4%;
+    padding: 0;
+    width: 60%;
+    border-radius: 45px;
+    text-align: center;
+    margin-top: 7%;
+}
+mat-form-field{
+    margin: auto;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#view-btn{
+    color: $show-btn
+}
+#edit-btn{
+    color:$edit-btn;
+}
+#delete-btn{
+    color:$delete-btn;
+}
+
+#add-btn{
+    background-color: $add-btn;
+    float: right;
+    margin: 0%;
+}

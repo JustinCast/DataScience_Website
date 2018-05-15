@@ -10,7 +10,6 @@ const routes: Routes = [
     {
       path: 'show-blog', component: ShowBlogComponent,
         children: [
-          
           { path: 'details-blog', component: DetailsBlogComponent}
         ]
     },
@@ -27,5 +26,5 @@ const routes: Routes = [
     ]
 })
   
-export class usersRoutingModule {
+export class blogRoutingModule {
 }
