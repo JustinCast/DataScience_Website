@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShowBlogComponent } from './show-blog/show-blog.component';
-import { AddBlogComponent } from './add-blog/add-blog.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
+import { ModifyBlogComponent } from './modify-blog/modify-blog.component';
+import { DetailsBlogComponent } from './details-blog/details-blog.component';
 
 @NgModule({
   imports: [
@@ -9,7 +11,9 @@ import { AddBlogComponent } from './add-blog/add-blog.component';
   ],
   declarations: [
     ShowBlogComponent, 
-    AddBlogComponent
+    CreateBlogComponent, 
+    ModifyBlogComponent,
+    DetailsBlogComponent
   ]
 })
 export class BlogModule { }
