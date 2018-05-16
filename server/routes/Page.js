@@ -3,46 +3,42 @@ var TYPES = require('tedious').TYPES;
 
 
 router.get('/', function (req, res) {
-
-    req.sql("select * from page for json path")
+    req.sql("SELECT * FROM page for json path")
         .into(res, '[]');
-
 });
 
 
-router.get('/:id', function (req, res) {
-    
-    req.sql("select * from page where id = @id for json path, without_array_wrapper")
+router.get('/:id', function (req, res) {  
+    req.sql("SELECT * FROM page where id = @id for json path, without_array_wrapper")
         .param('id', req.params.id, TYPES.Int)
         .into(res, '{}');
-
 });
 
 
 router.post('/', function (req, res) {
-    
-    req.sql("exec createPage @page")
-        .param('page', req.body, TYPES.NVarChar)
+    req.sql("exec create_page @title, @link, @description, @upload_id")
+        .param('title', req.body.title, TYPES.VarChar)
+        .param('link', req.body.link, TYPES.VarChar)
+        .param('description', req.body.description, TYPES.Text)
+        .param('upload_id', req.body.upload_id, TYPES.Int)
         .exec(res);
-
 });
 
 
-router.put('/:id', function (req, res) {
-    
-    req.sql("exec updatePage @id, @page")
-        .param('id', req.params.id, TYPES.Int)
-        .param('page', req.body, TYPES.NVarChar)
-        .exec(res);
-
+router.put('/', function (req, res) {
+    req.sql("exec update_page @page_id, @title, @link, @description, @upload_id")
+    .param('page_id', req.body.page_id, TYPES.Int)
+    .param('title', req.body.title, TYPES.VarChar)
+    .param('link', req.body.link, TYPES.VarChar)
+    .param('description', req.body.description, TYPES.Text)
+    .param('upload_id', req.body.upload_id, TYPES.Int)
+    .exec(res);
 });
 
-router.delete('/:id', function (req, res) {
-    
-    req.sql("delete from page where id = @id")
-        .param('id', req.params.id, TYPES.Int)
+router.delete('/:page_id', function (req, res) {
+    req.sql("exec delete_page @page_id")
+        .param('page_id', req.params.page_id, TYPES.Int)
         .exec(res);
-
 });
 
 module.exports = router;
