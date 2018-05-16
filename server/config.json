@@ -1,0 +1,9 @@
+{
+  "userName": "user",
+  "password": "pass",
+  "server": "server",
+  "options": {
+    "database": "dbo",
+    "encrypt": true
+  }
+}
