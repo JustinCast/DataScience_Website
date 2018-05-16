@@ -24,20 +24,17 @@ router.post('/:author/:id_thematic', function (req, res) {
 
 
 router.put('/:blog_id/:author/:id_thematic', function (req, res) {
-    
     req.sql("exec update_blog @blog_id, @author, @id_thematic")
         .param('blog_id', req.params.blog_id, TYPES.Int)
         .param('author', req.params.author, TYPES.Int)
         .param('id_thematic', req.params.id_thematic, TYPES.Int)
         .exec(res);
-
 });
 
 router.delete('/:blog_id', function (req, res) {    
     req.sql("exec delete_blog @blog_id")
         .param('blog_id', req.params.id, TYPES.Int)
         .exec(res);
-
 });
 
 module.exports = router;
