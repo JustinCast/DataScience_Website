@@ -10,7 +10,21 @@ app.use(function (req, res, next) {
 });
 
 app.use(bodyParser.text()); 
-app.use('/feedback', require('./routes/feedback'));
+app.use('/available-dataset', require('./routes/AvailableDataset'));
+app.use('/blog', require('./routes/Blog'));
+app.use('/code', require('./routes/Code'));
+app.use('/feedback', require('./routes/Feedback'));
+app.use('/filter', require('./routes/Filter'));
+app.use('/investigation', require('./routes/Investigation'));
+app.use('/member', require('./routes/Member'));
+app.use('/milestone', require('./routes/Milestone'));
+app.use('/page', require('./routes/Page'));
+app.use('/project', require('./routes/Project'));
+app.use('/proposal', require('./routes/Reference'));
+app.use('/review', require('./routes/Review'));
+app.use('/role', require('./routes/Role'));
+app.use('/thematic', require('./routes/Thematic'));
+app.use('/user-site', require('./routes/UserSite'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
