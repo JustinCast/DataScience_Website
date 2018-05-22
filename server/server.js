@@ -26,6 +26,14 @@ app.use('/role', require('./routes/Role'));
 app.use('/thematic', require('./routes/Thematic'));
 app.use('/user-site', require('./routes/UserSite'));
 
+// Angular DIST output folder
+app.use(express.static(__dirname + '/dist'));
+    
+// Send all other requests to the Angular app
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found: '+ req.method + ":" + req.originalUrl);

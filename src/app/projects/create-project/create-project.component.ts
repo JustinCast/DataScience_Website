@@ -39,7 +39,7 @@ export class CreateProjectComponent implements OnInit {
 
   onAddMembersClick(): boolean {
     let dialogRef = this.dialog.open(MembersTableComponent, {
-      width: '70%'
+      width: '70%',
     });
     return false
   }
