@@ -1,3 +1,68 @@
-<p>
-  show-blog works!
-</p>
+<button mat-fab routerLink='/create-blog' color="primary" id="add-btn" >
+  Add 
+</button>
+
+<mat-card id="search-blog-card">
+  <mat-form-field class="input-container">
+      <input matInput placeholder="Search Blog">
+  </mat-form-field>
+  <button mat-icon-button color="primary">
+      <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+  </button>
+</mat-card>
+  
+<div id="blog-admin-container" class="container card">
+  <mat-list style="width: 100%; padding: 0; margin-bottom: 1%">
+      <mat-list-item class="card" style="font-size: 15px; margin-top: 1%;">
+          <div>
+              blog 1
+          </div>
+          <div id="actions-container">
+              <button mat-icon-button [matMenuTriggerFor]="options">
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+          </div>
+      </mat-list-item>
+      <mat-list-item class="card" style="font-size: 15px; margin-top: 1%;">
+          <div>
+              blog 2
+          </div>
+          <div id="actions-container">
+              <button mat-icon-button [matMenuTriggerFor]="options">
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+          </div>
+      </mat-list-item>
+      <mat-list-item class="card" style="font-size: 15px; margin-top: 1%;">
+          <div>
+              Blog 3
+          </div>
+          <div id="actions-container">
+              <button mat-icon-button [matMenuTriggerFor]="options">
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+          </div>
+      </mat-list-item>
+  </mat-list>
+</div>
+
+<mat-menu #options>
+  <div>
+      <button mat-button  id="view-btn" (click)="openDialogDetailsBlog()">
+          <mat-icon>visibility</mat-icon>
+          Details
+      </button>
+  </div>
+  <div>
+      <button mat-button id="edit-btn" routerLink="/modify-blog">
+          <mat-icon>edit</mat-icon>
+          Modify
+      </button>
+  </div>
+  <div>
+      <button mat-button id="delete-btn" (click)="openDialogDeleteBlog()">
+          <mat-icon>delete</mat-icon>
+          Delete
+      </button>
+  </div>
+</mat-menu>

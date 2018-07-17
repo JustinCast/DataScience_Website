@@ -2,14 +2,14 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
-  selector: 'app-milestones-table',
-  templateUrl: './milestones-table.component.html',
-  styleUrls: ['./milestones-table.component.scss']
+  selector: 'app-details-blog',
+  templateUrl: './details-blog.component.html',
+  styleUrls: ['./details-blog.component.scss']
 })
-export class MilestonesTableComponent implements OnInit {
+export class DetailsBlogComponent implements OnInit {
 
   constructor(
-    public dialogRef: MatDialogRef<MilestonesTableComponent>,
+    public dialogRef: MatDialogRef<DetailsBlogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   onNoClick(): void {

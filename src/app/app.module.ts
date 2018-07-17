@@ -59,6 +59,7 @@ import { ProposalTableComponent } from './tables/proposal-table/proposal-table.c
   entryComponents: [
     MembersTableComponent,
     InvestigationsTableComponent,
+    MilestonesTableComponent,
     ProposalTableComponent
   ],
   providers: [],

@@ -64,28 +64,28 @@
 
 
 <mat-menu #options>
-        <div>
-            <button mat-button  id="view-btn" (click)="openDialogDetailsProject()">
-                <mat-icon>visibility</mat-icon>
-                Details
-            </button>
-        </div>
-        <div>
-            <button mat-button id="edit-btn" [routerLink]="['/edit-project']">
-                <mat-icon>edit</mat-icon>
-                Modify
-            </button>
-        </div>
-        <div>
-            <button mat-button id="delete-btn" (click)="openDialogDeleteProject()">
-                <mat-icon>delete</mat-icon>
-                Delete
-            </button>
-        </div>
-        <div>
-            <button mat-button id="milestone-btn" >
-                <mat-icon>playlist_add</mat-icon>
-                    Milestone
-            </button>
-        </div>
-    </mat-menu>
+    <div>
+        <button mat-button  id="view-btn" (click)="openDialogDetailsProject()">
+            <mat-icon>visibility</mat-icon>
+            Details
+        </button>
+    </div>
+    <div>
+        <button mat-button id="edit-btn" [routerLink]="['/edit-project']">
+            <mat-icon>edit</mat-icon>
+            Modify
+        </button>
+    </div>
+    <div>
+        <button mat-button id="delete-btn" (click)="openDialogDeleteProject()">
+            <mat-icon>delete</mat-icon>
+            Delete
+        </button>
+    </div>
+    <div>
+        <button mat-button id="milestone-btn" >
+            <mat-icon>playlist_add</mat-icon>
+                Milestone
+        </button>
+    </div>
+</mat-menu>
