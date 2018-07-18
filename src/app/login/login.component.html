@@ -1,3 +1,13 @@
-<form class="container" [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
-    <button type="submit" [disabled]="!loginGroup.valid">Login</button>
+<form class="container card text-center" [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+    <h2 class="text-primary text-center">Login</h2>
+    <mat-form-field class="example-full-width">
+        <input [formControl]="loginGroup.get('username')" matInput placeholder="Username">
+    </mat-form-field>
+    <mat-form-field>
+        <input [formControl]="loginGroup.get('password')" type="password" matInput placeholder="Password">
+    </mat-form-field>
+    <div style="margin-bottom: 2%" class="text-center">
+        <button color="primary" mat-raised-button type="submit" [disabled]="!loginGroup.valid">Go</button>
+        <button mat-button> I'm just a visitor</button>
+    </div>
 </form>
