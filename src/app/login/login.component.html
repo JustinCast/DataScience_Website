@@ -8,6 +8,6 @@
     </mat-form-field>
     <div style="margin-bottom: 2%" class="text-center">
         <button color="primary" mat-raised-button type="submit" [disabled]="!loginGroup.valid">Go</button>
-        <button mat-button> I'm just a visitor</button>
+        <button mat-button [routerLink]="['/home']"> I'm just a visitor</button>
     </div>
 </form>
